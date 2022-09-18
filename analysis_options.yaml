@@ -1,0 +1,10 @@
+include: package:flutter_lints/flutter.yaml
+
+analyzer:
+  errors:
+    avoid_print: ignore
+    missing_return: error
+    constant_identifier_names: ignore
+    use_build_context_synchronously: ignore
+    require_trailing_commas: ignore
+    depend_on_referenced_packages: ignore
