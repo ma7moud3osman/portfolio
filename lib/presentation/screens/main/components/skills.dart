@@ -24,21 +24,21 @@ class Skills extends StatelessWidget {
           children: const [
             Expanded(
               child: AnimatedCircularProgressIndicator(
-                percentage: 0.75,
+                percentage: 0.80,
                 label: "Flutter",
               ),
             ),
             SizedBox(width: defaultPadding),
             Expanded(
               child: AnimatedCircularProgressIndicator(
-                percentage: 0.50,
+                percentage: 0.55,
                 label: "Android",
               ),
             ),
             SizedBox(width: defaultPadding),
             Expanded(
               child: AnimatedCircularProgressIndicator(
-                percentage: 0.65,
+                percentage: 0.70,
                 label: "Firebase",
               ),
             ),

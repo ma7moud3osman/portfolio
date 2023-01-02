@@ -23,8 +23,7 @@ class Knowledge extends StatelessWidget {
         const KnowledgeText(text: "Flutter, Dart"),
         const KnowledgeText(text: "Android, Java, Kotlin"),
         const KnowledgeText(
-            text:
-                "Firebase, Firestore, Realtime Database, Authentication, Notifications"),
+            text: "Firebase  (Firestore, Realtime Database, Authentication, Notifications, Dynamic Links, Analytics, Crashlytics, Performance)"),
         const KnowledgeText(text: "GIT Knowledge"),
       ],
     );
@@ -44,6 +43,7 @@ class KnowledgeText extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.only(bottom: defaultPadding / 2),
       child: Row(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           SvgPicture.asset("assets/icons/check.svg"),
           const SizedBox(width: defaultPadding / 2),

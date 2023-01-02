@@ -2,6 +2,7 @@ import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
 import 'package:portfolio/core/constants/constants.dart';
 import 'package:portfolio/core/constants/responsive.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class HomeBanner extends StatelessWidget {
   const HomeBanner({
@@ -39,19 +40,14 @@ class HomeBanner extends StatelessWidget {
                             color: Colors.white,
                           ),
                 ),
-                if (Responsive.isMobileLarge(context))
-                  const SizedBox(height: defaultPadding / 2),
+                if (Responsive.isMobileLarge(context)) const SizedBox(height: defaultPadding / 2),
                 const MyBuildAnimatedText(),
                 const SizedBox(height: defaultPadding),
                 if (!Responsive.isMobileLarge(context))
                   ElevatedButton(
-                    onPressed: () {
-                      //TODO: handle 'Explore now' click event...
-                    },
+                    onPressed: () => launch('https://github.com/ma7moud3osman'),
                     style: TextButton.styleFrom(
-                      padding: const EdgeInsets.symmetric(
-                          horizontal: defaultPadding * 2,
-                          vertical: defaultPadding),
+                      padding: const EdgeInsets.symmetric(horizontal: defaultPadding * 2, vertical: defaultPadding),
                       backgroundColor: primaryColor,
                     ),
                     child: const Text(
@@ -82,13 +78,9 @@ class MyBuildAnimatedText extends StatelessWidget {
       child: Row(
         children: [
           if (!Responsive.isMobileLarge(context)) const FlutterCodedText(),
-          if (!Responsive.isMobileLarge(context))
-            const SizedBox(width: defaultPadding / 2),
-          Responsive.isMobile(context)
-              ? const Expanded(child: AnimatedText())
-              : const AnimatedText(),
-          if (!Responsive.isMobileLarge(context))
-            const SizedBox(width: defaultPadding / 2),
+          if (!Responsive.isMobileLarge(context)) const SizedBox(width: defaultPadding / 2),
+          Responsive.isMobile(context) ? const Expanded(child: AnimatedText()) : const AnimatedText(),
+          if (!Responsive.isMobileLarge(context)) const SizedBox(width: defaultPadding / 2),
           if (!Responsive.isMobileLarge(context)) const FlutterCodedText(),
         ],
       ),

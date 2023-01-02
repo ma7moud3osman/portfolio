@@ -14,8 +14,7 @@ class HighLightsInfo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(
-          vertical: defaultPadding, horizontal: defaultPadding),
+      padding: const EdgeInsets.symmetric(vertical: defaultPadding, horizontal: defaultPadding),
       child: !Responsive.isDesktop(context)
           ? Column(
               children: [
@@ -44,7 +43,7 @@ class HighLightsInfo extends StatelessWidget {
                   children: const [
                     HeighLight(
                       counter: AnimatedCounter(
-                        value: 4,
+                        value: 7,
                         text: "Apps",
                       ),
                       label: "IOS (App Store)",
@@ -52,6 +51,19 @@ class HighLightsInfo extends StatelessWidget {
                     HeighLight(
                       counter: AnimatedCounter(
                         value: 1,
+                        text: "Package",
+                      ),
+                      label: "Pub.dev",
+                    ),
+                  ],
+                ),
+                const SizedBox(height: defaultPadding),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: const [
+                    HeighLight(
+                      counter: AnimatedCounter(
+                        value: 2,
                         text: "+",
                       ),
                       label: "GitHub Projects",
@@ -79,7 +91,7 @@ class HighLightsInfo extends StatelessWidget {
                 ),
                 const HeighLight(
                   counter: AnimatedCounter(
-                    value: 4,
+                    value: 7,
                     text: "Apps",
                   ),
                   label: "IOS (App Store)",
@@ -87,6 +99,13 @@ class HighLightsInfo extends StatelessWidget {
                 const HeighLight(
                   counter: AnimatedCounter(
                     value: 1,
+                    text: "Package",
+                  ),
+                  label: "Pub.dev",
+                ),
+                const HeighLight(
+                  counter: AnimatedCounter(
+                    value: 2,
                     text: "+",
                   ),
                   label: "GitHub Projects",

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:portfolio/core/constants/constants.dart';
 import 'package:portfolio/data/models/project.dart';
 import 'package:portfolio/presentation/screens/projectDetails/components/image_view.dart';
@@ -45,30 +46,62 @@ class ProjectDetailsScreen extends StatelessWidget {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.end,
                     children: [
-                      if (project.url != null)
+                      if (project.pubDevUrl != null)
                         ClipRRect(
-                          borderRadius:
-                              BorderRadius.circular(defaultPadding * 4),
+                          borderRadius: BorderRadius.circular(defaultPadding * 4),
+                          child: Material(
+                            color: Colors.transparent,
+                            borderRadius: BorderRadius.circular(60),
+                            child: InkWell(
+                              onTap: () async => await launch(project.pubDevUrl!),
+                              borderRadius: BorderRadius.circular(60),
+                              child: Padding(
+                                padding: const EdgeInsets.all(12),
+                                child: Image.asset(
+                                  'assets/images/pub_dev.png',
+                                  width: 80,
+                                ),
+                              ),
+                            ),
+                          ),
+                        ),
+                      if (project.githubUrl != null)
+                        ClipRRect(
+                          borderRadius: BorderRadius.circular(defaultPadding * 4),
                           child: Material(
                             color: Colors.transparent,
                             child: IconButton(
-                              onPressed: () async => await launch(project.url!),
+                              onPressed: () async => await launch(project.githubUrl!),
+                              padding: const EdgeInsets.all(12),
+                              icon: SvgPicture.asset(
+                                'assets/icons/github.svg',
+                                width: 19,
+                              ),
+                            ),
+                          ),
+                        ),
+                      if (project.androidUrl != null)
+                        ClipRRect(
+                          borderRadius: BorderRadius.circular(defaultPadding * 4),
+                          child: Material(
+                            color: Colors.transparent,
+                            child: IconButton(
+                              onPressed: () async => await launch(project.androidUrl!),
                               padding: const EdgeInsets.all(12),
                               icon: Image.asset(
                                 'assets/images/google_play_icon.png',
+                                width: 17,
                               ),
                             ),
                           ),
                         ),
                       if (project.iosUrl != null)
                         ClipRRect(
-                          borderRadius:
-                              BorderRadius.circular(defaultPadding * 4),
+                          borderRadius: BorderRadius.circular(defaultPadding * 4),
                           child: Material(
                             color: Colors.transparent,
                             child: IconButton(
-                              onPressed: () async =>
-                                  await launch(project.iosUrl!),
+                              onPressed: () async => await launch(project.iosUrl!),
                               padding: const EdgeInsets.all(12),
                               icon: Image.asset(
                                 'assets/images/app_store_icon.png',

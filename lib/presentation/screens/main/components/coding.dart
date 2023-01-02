@@ -21,19 +21,19 @@ class Coding extends StatelessWidget {
           ),
         ),
         const AnimatedLinearProgressIndicator(
-          percentage: 0.75,
+          percentage: 0.80,
           label: "Dart",
         ),
         const AnimatedLinearProgressIndicator(
-          percentage: 0.65,
+          percentage: 0.55,
           label: "Java",
         ),
         const AnimatedLinearProgressIndicator(
-          percentage: 0.65,
+          percentage: 0.55,
           label: "Kotlin",
         ),
         const AnimatedLinearProgressIndicator(
-          percentage: 0.55,
+          percentage: 0.50,
           label: "C++",
         ),
         // const AnimatedLinearProgressIndicator(

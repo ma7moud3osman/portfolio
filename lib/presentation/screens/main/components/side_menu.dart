@@ -7,6 +7,7 @@ import 'package:portfolio/presentation/screens/main/components/coding.dart';
 import 'package:portfolio/presentation/screens/main/components/knowledges.dart';
 import 'package:portfolio/presentation/screens/main/components/my_info.dart';
 import 'package:portfolio/presentation/screens/main/components/skills.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class SideMenu extends StatefulWidget {
   const SideMenu({
@@ -60,7 +61,7 @@ class _SideMenuState extends State<SideMenu> {
                     ),
                     const AreaInfoText(
                       title: "Age",
-                      text: "25",
+                      text: "27",
                     ),
                     const Skills(),
                     const SizedBox(height: defaultPadding),
@@ -70,7 +71,7 @@ class _SideMenuState extends State<SideMenu> {
                     const SizedBox(height: defaultPadding / 2),
                     TextButton(
                       onPressed: () {
-                        //TODO: Add CV link here...
+                        launch('https://github.com/ma7moud3osman/showcase/raw/main/resume/Mahmoud_Osman_Resume_Flutter.pdf');
                       },
                       child: FittedBox(
                         child: Row(
@@ -78,10 +79,7 @@ class _SideMenuState extends State<SideMenu> {
                             Text(
                               "DOWNLOAD CV",
                               style: TextStyle(
-                                color: Theme.of(context)
-                                    .textTheme
-                                    .bodyText1!
-                                    .color,
+                                color: Theme.of(context).textTheme.bodyText1!.color,
                               ),
                             ),
                             const SizedBox(width: defaultPadding / 2),

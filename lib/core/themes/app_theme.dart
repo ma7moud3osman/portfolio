@@ -44,20 +44,15 @@ class AppTheme {
   static setStatusBarAndNotificationBarColor(ThemeMode themeMode) {
     SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
       statusBarColor: Colors.transparent,
-      statusBarBrightness:
-          themeMode == ThemeMode.light ? Brightness.light : Brightness.dark,
-      statusBarIconBrightness:
-          themeMode == ThemeMode.light ? Brightness.dark : Brightness.light,
-      systemNavigationBarColor: themeMode == ThemeMode.light
-          ? lightBackgroundColor
-          : darkBackgroundColor,
-      systemNavigationBarIconBrightness:
-          themeMode == ThemeMode.light ? Brightness.dark : Brightness.light,
+      statusBarBrightness: themeMode == ThemeMode.light ? Brightness.light : Brightness.dark,
+      statusBarIconBrightness: themeMode == ThemeMode.light ? Brightness.dark : Brightness.light,
+      systemNavigationBarColor: themeMode == ThemeMode.light ? lightBackgroundColor : darkBackgroundColor,
+      systemNavigationBarIconBrightness: themeMode == ThemeMode.light ? Brightness.dark : Brightness.light,
       systemNavigationBarDividerColor: Colors.transparent,
     ));
   }
 
   static Brightness get currentSystemBrightness {
-    return SchedulerBinding.instance!.window.platformBrightness;
+    return SchedulerBinding.instance.window.platformBrightness;
   }
 }
