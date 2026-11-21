@@ -1,0 +1,40 @@
+{
+  "order": 80,
+  "status": "published",
+  "featured": false,
+  "group": "business",
+  "company": "",
+  "name_ar": "Kease",
+  "name_en": "Kease",
+  "category_ar": "عقارات",
+  "category_en": "Real estate",
+  "description_ar": "تجربة متكاملة لعملاء الشقق السكنية الفاخرة في شمال الرياض.",
+  "description_en": "A complete experience for residents of luxury apartments in north Riyadh.",
+  "features_ar": [
+    "استعراض الوحدات",
+    "الحجز والمتابعة",
+    "خدمات السكان",
+    "عربي وإنجليزي"
+  ],
+  "features_en": [
+    "Browse units",
+    "Booking and follow-up",
+    "Resident services",
+    "Arabic and English"
+  ],
+  "role_ar": "تطبيق Flutter ولوحة Laravel",
+  "role_en": "The Flutter app and the Laravel panel",
+  "stack": "Flutter · Laravel",
+  "icon": "/uploads/projects/kease/icon.jpg",
+  "screens": [
+    "/uploads/projects/kease/screen-1.jpg",
+    "/uploads/projects/kease/screen-2.jpg",
+    "/uploads/projects/kease/screen-3.jpg"
+  ],
+  "landscape": false,
+  "logo_only": false,
+  "tint": "#E6E1F5",
+  "accent": "#5B3DB5",
+  "play_url": "https://play.google.com/store/apps/details?id=sa.ewa.dev",
+  "appstore_url": "https://apps.apple.com/eg/app/kease/id1595796099"
+}

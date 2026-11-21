@@ -1,0 +1,38 @@
+{
+  "order": 100,
+  "status": "published",
+  "featured": false,
+  "group": "life",
+  "company": "Nadeer",
+  "name_ar": "Jawab",
+  "name_en": "Jawab",
+  "category_ar": "تعليم",
+  "category_en": "Education",
+  "description_ar": "منصة تعليمية للطلاب والمدرسين: بنوك أسئلة واختبارات، وتصحيح ونتائج، ومتابعة مستوى كل طالب.",
+  "description_en": "A learning platform for students and teachers: question banks and quizzes, grading and results, and progress tracking for every student.",
+  "features_ar": [
+    "بنوك أسئلة",
+    "اختبارات وكويزات",
+    "تصحيح ونتائج",
+    "حسابات للطلاب والمدرسين"
+  ],
+  "features_en": [
+    "Question banks",
+    "Exams and quizzes",
+    "Grading and results",
+    "Student and teacher accounts"
+  ],
+  "role_ar": "تطوير التطبيق بـ Flutter",
+  "role_en": "Building the app in Flutter",
+  "stack": "Flutter · Clean Architecture",
+  "icon": "/uploads/projects/jawab/icon.png",
+  "screens": [
+    "/uploads/projects/jawab/icon.png"
+  ],
+  "landscape": false,
+  "logo_only": true,
+  "tint": "#E2ECF7",
+  "accent": "#1D5FA8",
+  "play_url": "",
+  "appstore_url": ""
+}

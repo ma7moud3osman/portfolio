@@ -1,0 +1,242 @@
+---
+import Base from '../layouts/Base.astro';
+import Phone from './Phone.astro';
+import StoreLinks from './StoreLinks.astro';
+import { loadApps, pick, site } from '../data/load';
+import { t, type Lang } from '../i18n/ui';
+
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const u = t(lang);
+const apps = await loadApps(lang);
+const byId = new Map(apps.map((a) => [a.id, a]));
+const live = apps.filter((a) => a.play || a.appstore).length;
+const heroApps = site.hero_apps.map((id) => byId.get(id)).filter((a) => a !== undefined);
+const hero = heroApps[0] ?? apps[0];
+const featured = apps.filter((a) => a.featured);
+const first = apps[0];
+const platforms = (a: (typeof apps)[number]) => [a.play && 'Android', a.appstore && 'iOS'].filter(Boolean).join(' · ');
+const metaLine = (a: (typeof apps)[number]) => [a.meta, a.category].filter(Boolean).join(' · ');
+const cats = [
+  ['all', u.catAll],
+  ['business', u.catBusiness],
+  ['life', u.catLife],
+  ['game', u.catGame],
+] as const;
+const count = (c: string) => apps.filter((a) => c === 'all' || a.group === c).length;
+const band = apps.map((a) => ({ name: a.name, icon: a.icon }));
+const otherHref = lang === 'ar' ? '/en/' : '/';
+const name = site.name;
+const check = (color: string) =>
+  `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="${color}" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>`;
+const clientData = {
+  hero: site.hero_apps,
+  apps: apps.map(({ id, name, category, description, features, role, stack, meta, group, icon, screens, landscape, logoOnly, tint, accent, play, appstore }) =>
+    ({ id, name, category, description, features, role, stack, meta, group, icon, screens, landscape, logoOnly, tint, accent, play, appstore })),
+  i18n: { autoStop: u.autoStop, autoStart: u.autoStart, screenN: u.screenN, shotOf: u.shotOf },
+};
+---
+<Base lang={lang}>
+  <a class="skip" href="#main">{u.skip}</a>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand d" lang="en" dir="ltr" href={lang === 'ar' ? '/' : '/en/'}>{name}</a>
+      <nav class="nav" aria-label={u.navLabel}>
+        <a href="#featured">{u.navFeatured}</a>
+        <a href="#room">{u.navGallery}</a>
+        <a href="#journey">{u.navJourney}</a>
+        <a href="#contact">{u.navContact}</a>
+      </nav>
+      <a class="lang-link" href={otherHref} lang={lang === 'ar' ? 'en' : 'ar'} hreflang={lang === 'ar' ? 'en' : 'ar'} aria-label={u.otherLangName}>{u.otherLang}</a>
+      {site.cv && <a class="btn" href={site.cv} target="_blank" rel="noopener">{u.cv}</a>}
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero amb" id="hero" style={`background-color:${hero.tint}`}>
+      <div class="wrap">
+        <div class="hero-text">
+          <span class="badge"><img src={site.photo} alt="" width="28" height="28" />{u.badge(live)}</span>
+          <h1 class="d">{pick(site, 'headline', lang)}</h1>
+          <p class="hero-sub">
+            {u.heroLead && <span>{u.heroLead}</span>}
+            <span class="tick" lang="en"><span><span>Flutter</span><span>Android</span><span>iOS</span><span>Laravel</span></span></span>
+            <span>{u.heroTail}</span>
+          </p>
+          <div class="hero-ctas">
+            <a class="btn lg" href="#room">{u.enterGallery}</a>
+            <a class="btn lg light" href="#contact">{u.contactMe}</a>
+          </div>
+          <div class="hero-stats">
+            <div><b data-count={live}>{live}</b><span>{u.statApps}</span></div>
+            <div><b data-count={site.years_experience} data-prefix="+">+{site.years_experience}</b><span>{u.statYears}</span></div>
+            <div><b data-count={site.companies_count}>{site.companies_count}</b><span>{u.statCompanies}</span></div>
+          </div>
+        </div>
+        <div class="hero-stage">
+          <div class="now">
+            <small>{u.nowShowing}</small>
+            <div class="now-body" id="hero-info">
+              <img id="hero-icon" src={hero.icon} alt="" width="64" height="64" />
+              <strong id="hero-name">{hero.name}</strong>
+              <span id="hero-cat">{hero.category}</span>
+            </div>
+          </div>
+          <Phone class="phone-hero" id="hero-shot" src={hero.screens[0]} alt={`${u.shotOf} ${hero.name}`} eager />
+        </div>
+      </div>
+      <div class="wrap">
+        <a class="cue" href="#featured"><i aria-hidden="true"></i>{u.scrollCue}</a>
+      </div>
+    </section>
+
+    <div class="bands" aria-hidden="true">
+      <div class="band band-1"><div class="band-track">
+        {[...band, ...band].map((b) => <span><img src={b.icon} alt="" loading="lazy" width="48" height="48" />{b.name}</span>)}
+      </div></div>
+      <div class="band band-2"><div class="band-track">
+        {[...site.skills, ...site.skills].map((s) => <span lang="en">{s}</span>)}
+      </div></div>
+    </div>
+
+    <section id="featured" class="featured wrap">
+      <div class="sec-head rv">
+        <h2 class="d">{u.navFeatured}</h2>
+        <p>{u.featuredLead}</p>
+      </div>
+      <div class="cards">
+        {featured.map((a, i) => {
+          const [s1, s2 = s1, s3 = s2] = a.screens;
+          return (
+            <article class:list={['card', a.landscape && 'card-landscape']} style={`top:${96 + i * 24}px;background:${a.tint}`}>
+              <div class="card-cols">
+                <div class="card-text">
+                  <div class="card-meta"><img src={a.icon} alt="" width="60" height="60" loading="lazy" /><span>{metaLine(a)}</span></div>
+                  <h3 class="d">{a.name}</h3>
+                  <p class="card-desc">{a.description}</p>
+                  <dl class="facts">
+                    <div><dt>{u.role}</dt><dd>{a.role}</dd></div>
+                    {platforms(a) && <div><dt>{u.platforms}</dt><dd>{platforms(a)}</dd></div>}
+                    <div><dt>{u.stack}</dt><dd lang="en">{a.stack}</dd></div>
+                  </dl>
+                  <div class="card-actions">
+                    <StoreLinks play={a.play} appstore={a.appstore} name={a.name} />
+                    <a class="text-link" href="#room" data-open={a.id}>{u.allScreens}</a>
+                  </div>
+                </div>
+                <div class="card-phones">
+                  {a.landscape
+                    ? <><Phone class="phone-wide ph1" src={s1} alt={`${u.shotOf} ${a.name}`} /><Phone class="phone-wide ph2" src={s2} /></>
+                    : <><Phone class="phone-card ph1" src={s1} over={s3 !== s1 ? s3 : undefined} alt={`${u.shotOf} ${a.name}`} /><Phone class="phone-card ph2" src={s2} /></>}
+                </div>
+              </div>
+            </article>
+          );
+        })}
+      </div>
+    </section>
+
+    <section id="room" class="room amb" style={`background-color:${first.tint}`}>
+      <div class="wrap">
+        <div class="sec-head room-head rv">
+          <div>
+            <h2 class="d">{u.navGallery}</h2>
+            <p>{u.galleryLead}</p>
+          </div>
+          <div class="room-controls">
+            <div class="chips" role="group" aria-label={u.catGroup}>
+              {cats.map(([id, label]) => <button type="button" class="chip" data-cat={id} aria-pressed={id === 'all' ? 'true' : 'false'}>{label} <span>{count(id)}</span></button>)}
+            </div>
+            <button type="button" class="auto-btn" id="auto-btn" aria-pressed="true">{u.autoStop}</button>
+          </div>
+        </div>
+        <div class="room-grid">
+          <div class="app-list" role="listbox" aria-label={u.appsList}>
+            {apps.map((a, i) => (
+              <button type="button" class="app-btn" role="option" data-idx={i} data-group={a.group} aria-selected={i === 0 ? 'true' : 'false'}>
+                <img src={a.icon} alt="" width="44" height="44" loading="lazy" />
+                <span><b>{a.name}</b><small>{a.category}</small></span>
+              </button>
+            ))}
+          </div>
+          <div class="stage">
+            <div class="stage-device">
+              <Phone class:list={['phone-room', first.landscape && 'is-landscape', first.logoOnly && 'is-logo']} id="room-shot" src={first.screens[0]} alt={`${u.shotOf} ${first.name}`} />
+            </div>
+            <div class="thumbs" id="room-thumbs">
+              {first.screens.map((s, n) => (
+                <button type="button" class:list={['thumb', first.landscape && 'wide']} data-shot={n} aria-label={`${u.screenN} ${n + 1}`} aria-pressed={n === 0 ? 'true' : 'false'} style={n === 0 ? `border-color:${first.accent}` : ''}><img src={s} alt="" loading="lazy" /></button>
+              ))}
+            </div>
+          </div>
+          <article class="detail" id="room-detail">
+            <div class="detail-head">
+              <img data-f="icon" src={first.icon} alt="" width="64" height="64" />
+              <div><h3 class="d" data-f="name">{first.name}</h3><span data-f="meta">{metaLine(first)}</span></div>
+            </div>
+            <p class="detail-desc" data-f="description">{first.description}</p>
+            <ul class="feats" data-f="features">
+              {first.features.map((f) => <li><Fragment set:html={check(first.accent)} />{f}</li>)}
+            </ul>
+            <dl class="facts">
+              <div><dt>{u.role}</dt><dd data-f="role">{first.role}</dd></div>
+              <div><dt>{u.stack}</dt><dd lang="en" data-f="stack">{first.stack}</dd></div>
+            </dl>
+            <div class="stores"><StoreLinks play={first.play} appstore={first.appstore} name={first.name} keepHidden /></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="stats wrap">
+      <ul class="tiles rv">
+        <li class="tile"><b>{live}</b><span>{u.statApps}</span></li>
+        <li class="tile"><b>+{site.years_experience}</b><span>{u.statYearsLong}</span></li>
+        <li class="tile"><b>{site.companies_count}</b><span>{u.statCompanies}</span></li>
+        <li class="tile"><b>2</b><span>{u.statPlatforms}</span></li>
+      </ul>
+    </section>
+
+    <section class="process wrap">
+      <h2 class="h2 sm d rv">{u.processTitle}</h2>
+      <ol class="tiles">
+        {site.steps.map((s, i) => (
+          <li class="tile step rv"><b class="d">{String(i + 1).padStart(2, '0')}</b><strong>{pick(s, 'title', lang)}</strong><p>{pick(s, 'body', lang)}</p></li>
+        ))}
+      </ol>
+    </section>
+
+    <section id="journey" class="journey wrap">
+      <h2 class="h2 sm d rv">{u.navJourney}</h2>
+      <ol class="tiles">
+        {site.experience.map((j) => (
+          <li class="tile job rv" style={`--c:${j.color}`}>
+            <small>{pick(j, 'period', lang)}</small>
+            <strong>{pick(j, 'company', lang)}</strong>
+            <p lang={lang === 'ar' && /^[A-Za-z]/.test(j.role_ar) ? 'en' : undefined}>{pick(j, 'role', lang)}</p>
+            <div class="job-apps">
+              {j.apps.map((id) => byId.get(id)).filter(Boolean).map((a) => <img src={a!.icon} alt={a!.name} title={a!.name} width="32" height="32" loading="lazy" />)}
+            </div>
+          </li>
+        ))}
+      </ol>
+    </section>
+  </main>
+
+  <footer id="contact" class="footer">
+    <a class="footer-marquee" href={`mailto:${site.email}`} aria-label={u.emailMe}>
+      <span aria-hidden="true">{[0, 1, 2, 3].map(() => <><span>{u.footerLine}</span><i>•</i></>)}</span>
+    </a>
+    <div class="wrap footer-row">
+      <a class="btn light" href={`mailto:${site.email}`}>{u.emailMe}</a>
+      <div class="footer-links">
+        {site.linkedin && <a href={site.linkedin} target="_blank" rel="noopener">LinkedIn</a>}
+        {site.github && <a href={site.github} target="_blank" rel="noopener">GitHub</a>}
+        {site.mostaql && <a href={site.mostaql} target="_blank" rel="noopener">{u.mostaql}</a>}
+      </div>
+    </div>
+  </footer>
+
+  <script type="application/json" id="portfolio-data" set:html={JSON.stringify(clientData)} />
+  <script src="../scripts/portfolio.ts"></script>
+</Base>

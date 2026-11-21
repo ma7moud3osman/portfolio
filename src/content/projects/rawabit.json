@@ -1,0 +1,40 @@
+{
+  "order": 90,
+  "status": "published",
+  "featured": false,
+  "group": "business",
+  "company": "Nadeer",
+  "year": 2025,
+  "name_ar": "Rawabit",
+  "name_en": "Rawabit",
+  "category_ar": "نظام ERP",
+  "category_en": "ERP system",
+  "description_ar": "محاسبة وموارد بشرية وإدارة عملاء في نظام واحد، مع تقارير لحظية لأداء الشركة.",
+  "description_en": "Accounting, HR and customer management in one system, with real-time company reports.",
+  "features_ar": [
+    "الفواتير والقيود",
+    "الحضور والرواتب",
+    "إدارة العملاء CRM",
+    "تقارير لحظية"
+  ],
+  "features_en": [
+    "Invoices and journal entries",
+    "Attendance and payroll",
+    "CRM",
+    "Real-time reports"
+  ],
+  "role_ar": "الشاشات والربط بالـ APIs",
+  "role_en": "Screens and API integration",
+  "stack": "Flutter · BLoC · Clean Architecture",
+  "icon": "/uploads/projects/rawabit/icon.jpg",
+  "screens": [
+    "/uploads/projects/rawabit/screen-1.jpg",
+    "/uploads/projects/rawabit/screen-2.jpg"
+  ],
+  "landscape": false,
+  "logo_only": false,
+  "tint": "#DDE3F3",
+  "accent": "#1E3A8A",
+  "play_url": "https://play.google.com/store/apps/details?id=com.nadeer.rawabit",
+  "appstore_url": "https://apps.apple.com/us/app/rawabit/id1660957958"
+}

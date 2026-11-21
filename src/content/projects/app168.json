@@ -1,0 +1,39 @@
+{
+  "order": 110,
+  "status": "published",
+  "featured": false,
+  "group": "life",
+  "company": "Nadeer",
+  "year": 2024,
+  "name_ar": "168",
+  "name_en": "168",
+  "category_ar": "إنتاجية",
+  "category_en": "Productivity",
+  "description_ar": "تطبيق لإدارة المهام وتنظيم العمل ومتابعة الإنتاجية.",
+  "description_en": "Task management, work planning and productivity tracking.",
+  "features_ar": [
+    "إنشاء المهام وتصنيفها",
+    "نسب الإنجاز",
+    "تذكيرات",
+    "تقارير الأداء"
+  ],
+  "features_en": [
+    "Create and organize tasks",
+    "Completion rates",
+    "Reminders",
+    "Performance reports"
+  ],
+  "role_ar": "الشاشات والمزايا",
+  "role_en": "Screens and features",
+  "stack": "Flutter · BLoC · Clean Architecture",
+  "icon": "/uploads/projects/app168/icon.jpg",
+  "screens": [
+    "/uploads/projects/app168/screen-1.jpg"
+  ],
+  "landscape": false,
+  "logo_only": false,
+  "tint": "#ECE6FA",
+  "accent": "#6D3FD0",
+  "play_url": "https://play.google.com/store/apps/details?id=com.nadeer.app168",
+  "appstore_url": "https://apps.apple.com/sa/app/168/id6499256400"
+}

@@ -1,0 +1,40 @@
+{
+  "order": 40,
+  "status": "published",
+  "featured": true,
+  "group": "life",
+  "company": "GAIT",
+  "year": 2026,
+  "name_ar": "شعائر",
+  "name_en": "Sha'air",
+  "category_ar": "تطبيق إسلامي",
+  "category_en": "Islamic app",
+  "description_ar": "مواقيت الصلاة والأذكار والقرآن الكريم، مع حفظ بالتكرار وودجت يتحدث والتطبيق مغلق.",
+  "description_en": "Prayer times, adhkar and the Holy Quran, with repetition-based memorization and widgets that update while the app is closed.",
+  "features_ar": [
+    "11 قارئًا",
+    "يعمل بدون إنترنت",
+    "ودجت للشاشة الرئيسية",
+    "عربي وإنجليزي"
+  ],
+  "features_en": [
+    "11 reciters",
+    "Works offline",
+    "Home screen widgets",
+    "Arabic and English"
+  ],
+  "role_ar": "معظم التطبيق والنشر",
+  "role_en": "Most of the app and store releases",
+  "stack": "Flutter · Home widgets",
+  "icon": "/uploads/projects/shaair/icon.jpg",
+  "screens": [
+    "/uploads/projects/shaair/screen-1.jpg",
+    "/uploads/projects/shaair/screen-2.jpg"
+  ],
+  "landscape": false,
+  "logo_only": false,
+  "tint": "#F1E8DA",
+  "accent": "#B4761F",
+  "play_url": "https://play.google.com/store/apps/details?id=com.GAIT.jannah",
+  "appstore_url": "https://apps.apple.com/eg/app/shaair-prayer-times-adhkar/id6761620312"
+}

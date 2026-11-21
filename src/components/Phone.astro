@@ -1,0 +1,10 @@
+---
+interface Props { class?: string; src: string; alt?: string; over?: string; id?: string; eager?: boolean }
+const { class: cls = '', src, alt = '', over, id, eager = false } = Astro.props;
+---
+<div class:list={['phone', cls]}>
+  <div>
+    <img id={id} src={src} alt={alt} loading={eager ? 'eager' : 'lazy'} decoding="async" />
+    {over && <img class="over" src={over} alt="" loading="lazy" decoding="async" />}
+  </div>
+</div>

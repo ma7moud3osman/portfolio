@@ -1,0 +1,41 @@
+{
+  "order": 20,
+  "status": "published",
+  "featured": true,
+  "group": "business",
+  "company": "GAIT",
+  "year": 2026,
+  "name_ar": "Haqlex",
+  "name_en": "Haqlex",
+  "category_ar": "قانون",
+  "category_en": "Legal",
+  "description_ar": "رفيق مكتب المحاماة: القضايا والجلسات في جيبك، يعمل بدون إنترنت ويتزامن مع كمبيوتر المكتب على الشبكة المحلية.",
+  "description_en": "A legal office companion: cases and hearings in your pocket, working offline and syncing with the office computer over the local network.",
+  "features_ar": [
+    "لوحة مهام اليوم",
+    "بحث في سجلات المكتب",
+    "مزامنة على الشبكة المحلية",
+    "ودجت للشاشة الرئيسية"
+  ],
+  "features_en": [
+    "Today dashboard",
+    "Search office records",
+    "Local network sync",
+    "Home screen widgets"
+  ],
+  "role_ar": "تطبيقات الموبايل وسطح المكتب",
+  "role_en": "The mobile and desktop apps",
+  "stack": "Flutter · Desktop · Laravel",
+  "icon": "/uploads/projects/haqlex/icon.jpg",
+  "screens": [
+    "/uploads/projects/haqlex/screen-1.jpg",
+    "/uploads/projects/haqlex/screen-2.jpg",
+    "/uploads/projects/haqlex/screen-3.jpg"
+  ],
+  "landscape": false,
+  "logo_only": false,
+  "tint": "#ECE4D3",
+  "accent": "#7A5A1E",
+  "play_url": "https://play.google.com/store/apps/details?id=com.gaitco.haqlex",
+  "appstore_url": "https://apps.apple.com/eg/app/haqlex/id6762099305"
+}

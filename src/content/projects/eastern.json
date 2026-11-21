@@ -1,0 +1,39 @@
+{
+  "order": 150,
+  "status": "published",
+  "featured": false,
+  "group": "business",
+  "company": "ScopeLinks",
+  "name_ar": "هايبر أسواق الشرقية",
+  "name_en": "Eastern Hypermarkets",
+  "category_ar": "تجارة جملة",
+  "category_en": "Wholesale",
+  "description_ar": "متجر جملة للتجار من هايبر أسواق الشرقية: تصفح المنتجات والأسعار والطلب مباشرة.",
+  "description_en": "A wholesale store for traders from Eastern Hypermarkets: browse products and prices and order directly.",
+  "features_ar": [
+    "حسابات للتجار",
+    "تصفح المنتجات والأسعار",
+    "سلة وطلبات",
+    "دخول بـ Google وFacebook"
+  ],
+  "features_en": [
+    "Trader accounts",
+    "Products and prices",
+    "Cart and orders",
+    "Google and Facebook sign-in"
+  ],
+  "role_ar": "تطوير التطبيق بـ Flutter",
+  "role_en": "Building the app in Flutter",
+  "stack": "Flutter · REST APIs",
+  "icon": "/uploads/projects/eastern/icon.png",
+  "screens": [
+    "/uploads/projects/eastern/screen-1.jpg",
+    "/uploads/projects/eastern/screen-2.jpg"
+  ],
+  "landscape": false,
+  "logo_only": false,
+  "tint": "#FBE3E1",
+  "accent": "#C81E1E",
+  "play_url": "https://play.google.com/store/apps/details?id=com.scopelinks.eastern",
+  "appstore_url": ""
+}

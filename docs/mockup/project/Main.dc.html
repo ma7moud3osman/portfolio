@@ -1,0 +1,260 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<title>الاتجاه 1 - المسرح</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@300;400;600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#070B1A}
+a{color:#7FDBFF;text-decoration:none}a:hover{color:#B8ECFF}
+a:focus-visible,button:focus-visible{outline:3px solid #7FDBFF;outline-offset:3px;border-radius:8px}
+@keyframes rise{from{opacity:0;transform:translateY(32px)}to{opacity:1;transform:none}}
+@keyframes floatA{0%,100%{transform:translateY(0) rotate(-8deg)}50%{transform:translateY(-22px) rotate(-6deg)}}
+@keyframes floatB{0%,100%{transform:translateY(-10px)}50%{transform:translateY(12px)}}
+@keyframes floatC{0%,100%{transform:translateY(0) rotate(8deg)}50%{transform:translateY(-18px) rotate(6deg)}}
+@keyframes glow{0%,100%{opacity:.5;transform:scale(1)}50%{opacity:.85;transform:scale(1.12)}}
+@keyframes orbit{to{transform:rotate(360deg)}}
+@keyframes counter{to{transform:rotate(-360deg)}}
+@keyframes marquee{from{transform:translateX(0)}to{transform:translateX(50%)}}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(52,211,153,.6)}70%{box-shadow:0 0 0 12px rgba(52,211,153,0)}100%{box-shadow:0 0 0 0 rgba(52,211,153,0)}}
+@keyframes swap{0%,42%{opacity:1}50%,92%{opacity:0}100%{opacity:1}}
+@keyframes scan{from{transform:translateY(-100%)}to{transform:translateY(100%)}}
+@keyframes grow{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+.lift{transition:transform .35s ease,border-color .35s ease}.lift:hover{transform:translateY(-8px);border-color:#3D4E86}
+@media (prefers-reduced-motion: reduce){*{animation:none!important;transition:none!important}}
+</style>
+</helmet>
+<div dir="rtl" style="font-family: 'Readex Pro', system-ui, sans-serif; color: #EAF0FF; background: #070B1A; overflow: hidden">
+
+  <header style="max-width: 1280px; margin: 0 auto; padding: 28px 40px; display: flex; flex-wrap: wrap; align-items: center; gap: 16px 40px; position: relative; z-index: 2">
+    <a href="#" style="font-weight: 700; font-size: 22px; color: #FFFFFF; display: inline-flex; align-items: center; gap: 10px">
+      <span style="width: 36px; height: 36px; border-radius: 10px; background: linear-gradient(135deg, #4FD1FF, #8B5CFF); display: inline-flex; align-items: center; justify-content: center; font-size: 16px; color: #070B1A">م</span>
+      محمود عثمان
+    </a>
+    <nav aria-label="القائمة الرئيسية" style="display: flex; flex-wrap: wrap; gap: 28px; flex-grow: 1; font-size: 16px">
+      <a href="#work" style="color: #C5CEE8">الأعمال</a>
+      <a href="#journey" style="color: #C5CEE8">المسيرة</a>
+      <a href="#contact" style="color: #C5CEE8">التواصل</a>
+    </nav>
+    <a href="#" lang="en" style="color: #9AA6C8; font-size: 15px">EN</a>
+    <a href="#" target="_blank" style="border: 1px solid #2C3A66; color: #FFFFFF; padding: 11px 20px; border-radius: 999px; font-size: 15px">السيرة الذاتية</a>
+  </header>
+
+  <section style="position: relative; max-width: 1280px; margin: 0 auto; padding: 40px 40px 120px; display: flex; flex-wrap: wrap; gap: 48px; align-items: center">
+    <div aria-hidden="true" style="position: absolute; left: 6%; top: 40px; width: 620px; height: 620px; border-radius: 50%; background: radial-gradient(circle, rgba(79,209,255,.35), rgba(139,92,255,.18) 45%, transparent 70%); filter: blur(30px); animation: glow 7s ease-in-out infinite"></div>
+
+    <div style="flex: 1 1 500px; min-width: 0; display: flex; flex-direction: column; gap: 28px; position: relative; z-index: 1">
+      <span style="align-self: flex-start; display: inline-flex; align-items: center; gap: 10px; background: #0F1A36; border: 1px solid #22305A; padding: 8px 16px; border-radius: 999px; font-size: 14px; color: #C5CEE8; animation: rise .8s ease both">
+        <span style="width: 9px; height: 9px; border-radius: 50%; background: #34D399; animation: pulse 2s infinite"></span>
+        متاح لمشاريع جديدة عن بُعد
+      </span>
+      <h1 style="margin: 0; font-size: 68px; line-height: 1.15; font-weight: 700; letter-spacing: -1px; animation: rise .9s .15s ease both">أبني تطبيقات موبايل تصل إلى المتجر، وتبقى تعمل بعد النشر.</h1>
+      <p style="margin: 0; font-size: 20px; line-height: 1.8; color: #AEB9D9; max-width: 32em; animation: rise .9s .3s ease both">مهندس برمجيات متخصص في Flutter لتطبيقات Android وiOS، وفي Laravel للـ APIs ولوحات التحكم. من الفكرة والتصميم حتى النشر والتحديثات.</p>
+      <div style="display: flex; flex-wrap: wrap; gap: 14px; animation: rise .9s .45s ease both">
+        <a href="#work" style="background: linear-gradient(135deg, #4FD1FF, #8B5CFF); color: #070B1A; font-weight: 600; padding: 16px 30px; border-radius: 999px; font-size: 17px">شاهد التطبيقات</a>
+        <a href="#contact" style="border: 1px solid #2C3A66; color: #FFFFFF; padding: 15px 28px; border-radius: 999px; font-size: 17px">ابدأ مشروعك</a>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; padding-top: 16px; animation: rise .9s .6s ease both">
+        <sc-for list="{{ stats }}" as="s" hint-placeholder-count="4">
+          <div style="border-top: 1px solid #22305A; padding-top: 14px; display: flex; flex-direction: column; gap: 4px">
+            <span style="font-size: 38px; font-weight: 700; color: #FFFFFF; font-variant-numeric: tabular-nums">{{ s.value }}</span>
+            <span style="font-size: 14px; color: #9AA6C8; line-height: 1.5">{{ s.label }}</span>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+
+    <div style="flex: 1 1 520px; min-width: 0; height: 640px; position: relative; z-index: 1">
+      <div aria-hidden="true" style="position: absolute; inset: 40px 30px; border: 1px dashed #24335F; border-radius: 50%; animation: orbit 40s linear infinite">
+        <span style="position: absolute; top: -18px; left: 50%; background: #0F1A36; border: 1px solid #2C3A66; padding: 6px 14px; border-radius: 999px; font-size: 13px; animation: counter 40s linear infinite">Flutter</span>
+        <span style="position: absolute; bottom: -18px; left: 40%; background: #0F1A36; border: 1px solid #2C3A66; padding: 6px 14px; border-radius: 999px; font-size: 13px; animation: counter 40s linear infinite">Laravel</span>
+        <span style="position: absolute; top: 45%; right: -30px; background: #0F1A36; border: 1px solid #2C3A66; padding: 6px 14px; border-radius: 999px; font-size: 13px; animation: counter 40s linear infinite">Firebase</span>
+        <span style="position: absolute; top: 40%; left: -40px; background: #0F1A36; border: 1px solid #2C3A66; padding: 6px 14px; border-radius: 999px; font-size: 13px; animation: counter 40s linear infinite">REST APIs</span>
+      </div>
+      <div style="position: absolute; right: 2%; top: 110px; width: 220px; height: 460px; border-radius: 38px; border: 8px solid #1A2547; overflow: hidden; box-shadow: 0 40px 80px rgba(0,0,0,.6); animation: floatA 8s ease-in-out infinite; background: #0F1A36">
+        <img src="/_blob/c22acdfb9a7529796137355fd738ae14" alt="شاشة من تطبيق شعائر" style="width: 100%; height: 100%; object-fit: cover">
+      </div>
+      <div style="position: absolute; left: 50%; margin-left: -135px; top: 40px; width: 270px; height: 560px; border-radius: 44px; border: 9px solid #1E2B52; overflow: hidden; box-shadow: 0 50px 100px rgba(0,0,0,.7), 0 0 80px rgba(79,209,255,.25); animation: floatB 6s ease-in-out infinite; background: #0F1A36; z-index: 2">
+        <img src="/_blob/ee0ea38d34ea549d55710213ca963cc3" alt="شاشة من تطبيق Ranisy" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover">
+        <img src="/_blob/b0db2f9ccf65a5c096e642b8473f4e39" alt="" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; animation: swap 8s infinite">
+        <span aria-hidden="true" style="position: absolute; inset: 0; background: linear-gradient(180deg, transparent, rgba(127,219,255,.18), transparent); animation: scan 4s linear infinite"></span>
+      </div>
+      <div style="position: absolute; left: 2%; top: 150px; width: 220px; height: 460px; border-radius: 38px; border: 8px solid #1A2547; overflow: hidden; box-shadow: 0 40px 80px rgba(0,0,0,.6); animation: floatC 9s ease-in-out infinite; background: #0F1A36">
+        <img src="/_blob/02dddcac1951d7fe5e43ca7e1b7c84df" alt="شاشة من تطبيق Rawabit" style="width: 100%; height: 100%; object-fit: cover">
+      </div>
+    </div>
+  </section>
+
+  <div aria-label="تطبيقات منشورة" style="border-top: 1px solid #16214A; border-bottom: 1px solid #16214A; background: #0A1024; padding: 22px 0; overflow: hidden">
+    <div style="display: flex; gap: 48px; width: max-content; animation: marquee 30s linear infinite">
+      <sc-for list="{{ marquee }}" as="m" hint-placeholder-count="18">
+        <span style="display: inline-flex; align-items: center; gap: 14px; font-size: 20px; color: #DDE5FF; white-space: nowrap">
+          <img src="{{ m.icon }}" alt="" style="width: 40px; height: 40px; border-radius: 11px">
+          {{ m.name }}
+        </span>
+      </sc-for>
+    </div>
+  </div>
+
+  <section id="work" style="max-width: 1280px; margin: 0 auto; padding: 120px 40px 40px; display: flex; flex-direction: column; gap: 40px">
+    <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 16px">
+      <h2 style="margin: 0; font-size: 52px; font-weight: 700; letter-spacing: -0.5px">تطبيقات يستخدمها الناس الآن</h2>
+      <p style="margin: 0; font-size: 17px; color: #9AA6C8; max-width: 28em; line-height: 1.7">كل تطبيق هنا منشور على Google Play أو App Store. افتح أي مشروع لترى الشاشات والمزايا ودوري فيه.</p>
+    </div>
+
+    <sc-for list="{{ featured }}" as="f" hint-placeholder-count="3">
+      <article class="lift" style="display: flex; flex-wrap: wrap; gap: 48px; align-items: center; background: linear-gradient(160deg, #0F1834, #0A1024); border: 1px solid #1C2850; border-radius: 36px; padding: 48px; position: relative; overflow: hidden">
+        <div aria-hidden="true" style="position: absolute; left: -120px; top: -120px; width: 420px; height: 420px; border-radius: 50%; background: radial-gradient(circle, {{ f.tint }}, transparent 70%); opacity: .5"></div>
+        <div style="flex: 0 0 260px; height: 520px; border-radius: 42px; border: 9px solid #1E2B52; overflow: hidden; position: relative; background: #0F1A36; box-shadow: 0 30px 70px rgba(0,0,0,.5)">
+          <img src="{{ f.shot1 }}" alt="شاشة من {{ f.name }}" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover">
+          <img src="{{ f.shot2 }}" alt="" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; animation: swap 7s infinite">
+        </div>
+        <div style="flex: 1 1 420px; min-width: 0; display: flex; flex-direction: column; gap: 20px; position: relative">
+          <div style="display: flex; align-items: center; gap: 16px">
+            <img src="{{ f.icon }}" alt="" style="width: 64px; height: 64px; border-radius: 16px">
+            <div style="display: flex; flex-direction: column; gap: 2px">
+              <h3 style="margin: 0; font-size: 34px; font-weight: 700">{{ f.name }}</h3>
+              <span style="font-size: 15px; color: #9AA6C8">{{ f.meta }}</span>
+            </div>
+          </div>
+          <p style="margin: 0; font-size: 19px; line-height: 1.8; color: #C5CEE8; max-width: 34em">{{ f.desc }}</p>
+          <div style="display: flex; flex-wrap: wrap; gap: 8px">
+            <sc-for list="{{ f.features }}" as="ft" hint-placeholder-count="4">
+              <span style="font-size: 14px; padding: 8px 14px; border-radius: 999px; background: #131F42; border: 1px solid #22305A; color: #DDE5FF">{{ ft }}</span>
+            </sc-for>
+          </div>
+          <p style="margin: 0; font-size: 15px; color: #9AA6C8; line-height: 1.7"><span style="color: #FFFFFF">دوري: </span>{{ f.role }}</p>
+          <div style="display: flex; flex-wrap: wrap; gap: 12px; padding-top: 4px">
+            <a href="#" target="_blank" style="display: inline-flex; align-items: center; gap: 8px; background: #FFFFFF; color: #070B1A; padding: 12px 20px; border-radius: 14px; font-size: 15px; font-weight: 600">Google Play</a>
+            <a href="#" target="_blank" style="display: inline-flex; align-items: center; gap: 8px; background: #FFFFFF; color: #070B1A; padding: 12px 20px; border-radius: 14px; font-size: 15px; font-weight: 600">App Store</a>
+            <a href="#" style="display: inline-flex; align-items: center; gap: 8px; color: #7FDBFF; padding: 12px 8px; font-size: 15px">تفاصيل المشروع</a>
+          </div>
+        </div>
+      </article>
+    </sc-for>
+
+    <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 20px">
+      <sc-for list="{{ more }}" as="p" hint-placeholder-count="6">
+        <a href="#" class="lift" style="display: flex; flex-direction: column; gap: 14px; background: #0C142D; border: 1px solid #1C2850; border-radius: 24px; padding: 24px; color: #EAF0FF">
+          <div style="display: flex; align-items: center; justify-content: space-between">
+            <img src="{{ p.icon }}" alt="" style="width: 52px; height: 52px; border-radius: 13px">
+            <span style="font-size: 13px; color: {{ p.statusColor }}; border: 1px solid {{ p.statusColor }}; padding: 4px 12px; border-radius: 999px">{{ p.status }}</span>
+          </div>
+          <span style="font-size: 21px; font-weight: 600">{{ p.name }}</span>
+          <span style="font-size: 15px; color: #9AA6C8; line-height: 1.6">{{ p.line }}</span>
+        </a>
+      </sc-for>
+    </div>
+  </section>
+
+  <section id="journey" style="max-width: 1280px; margin: 0 auto; padding: 100px 40px; display: flex; flex-direction: column; gap: 48px">
+    <h2 style="margin: 0; font-size: 52px; font-weight: 700">المسيرة</h2>
+    <div style="position: relative">
+      <div aria-hidden="true" style="position: absolute; top: 9px; right: 0; left: 0; height: 2px; background: linear-gradient(270deg, #4FD1FF, #8B5CFF); transform-origin: right; animation: grow 2.4s ease both"></div>
+      <ol style="list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 24px">
+        <sc-for list="{{ jobs }}" as="j" hint-placeholder-count="5">
+          <li style="display: flex; flex-direction: column; gap: 10px; padding-top: 0">
+            <span style="width: 20px; height: 20px; border-radius: 50%; background: #070B1A; border: 3px solid #7FDBFF"></span>
+            <span style="font-size: 14px; color: #9AA6C8; padding-top: 10px">{{ j.period }}</span>
+            <span style="font-size: 24px; font-weight: 700">{{ j.company }}</span>
+            <span style="font-size: 15px; color: #C5CEE8; line-height: 1.6">{{ j.role }}</span>
+          </li>
+        </sc-for>
+      </ol>
+    </div>
+  </section>
+
+  <footer id="contact" style="position: relative; padding: 120px 40px 80px; text-align: center; border-top: 1px solid #16214A; overflow: hidden">
+    <div aria-hidden="true" style="position: absolute; left: 50%; top: 40%; width: 900px; height: 500px; margin-left: -450px; border-radius: 50%; background: radial-gradient(circle, rgba(139,92,255,.35), transparent 65%); filter: blur(40px); animation: glow 8s ease-in-out infinite"></div>
+    <div style="position: relative; display: flex; flex-direction: column; align-items: center; gap: 28px">
+      <h2 style="margin: 0; font-size: 72px; font-weight: 700; letter-spacing: -1px; line-height: 1.15">عندك فكرة تطبيق؟<br>لنحوّلها إلى منتج منشور.</h2>
+      <a href="mailto:m.3osman99@gmail.com" style="background: linear-gradient(135deg, #4FD1FF, #8B5CFF); color: #070B1A; font-weight: 600; padding: 20px 40px; border-radius: 999px; font-size: 20px">راسلني الآن</a>
+      <nav aria-label="روابط التواصل" style="display: flex; gap: 28px; font-size: 16px">
+        <a href="#" target="_blank" style="color: #C5CEE8">LinkedIn</a>
+        <a href="#" target="_blank" style="color: #C5CEE8">GitHub</a>
+        <a href="#" target="_blank" style="color: #C5CEE8">مستقل</a>
+      </nav>
+    </div>
+  </footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":4200}}'>
+class Component extends DCLogic {
+  componentDidMount() {
+    const start = Date.now();
+    const tick = () => {
+      const t = Math.min(1, (Date.now() - start) / 1800);
+      this.setState({ t: 1 - Math.pow(1 - t, 3) });
+      if (t < 1) this.raf = requestAnimationFrame(tick);
+    };
+    this.raf = requestAnimationFrame(tick);
+  }
+  componentWillUnmount() { cancelAnimationFrame(this.raf); }
+  renderVals() {
+    const t = (this.state && this.state.t) || 0;
+    const c = (n) => Math.round(n * t);
+    const I = {
+      ranisy: '/_blob/acb13b1785673e44adc10a1d005868f4', aonevet: '/_blob/19f4869a25e350b7fc7ac7cb9aa16b66',
+      shaair: '/_blob/442309028bba453e85c7a3c72e4ed39a', m3: '/_blob/1c77d4981b09f97b7671faefc3597164',
+      rawabit: '/_blob/85e80de27c30919b7c201b153b293a00', a168: '/_blob/ed24bb7cc975342301acd2c1dcf02b64',
+      arkan: '/_blob/372c7eb48f18ba7542253c231e4c5d32', micropet: '/_blob/5a9358c849c3c460678e28bacadfe817',
+      cavo: '/_blob/17ecfb7b3e9e6c2f775f0c64ed087395'
+    };
+    const apps = [
+      { name: 'Ranisy', icon: I.ranisy }, { name: 'A One Vet', icon: I.aonevet }, { name: 'شعائر', icon: I.shaair },
+      { name: '3M & Solitaire', icon: I.m3 }, { name: 'Rawabit', icon: I.rawabit }, { name: '168', icon: I.a168 },
+      { name: 'أكاديمية الأركان', icon: I.arkan }, { name: 'MicroPet', icon: I.micropet }, { name: 'Cavo Egypt', icon: I.cavo }
+    ];
+    const live = '#34D399', wip = '#FBBF24';
+    return {
+      stats: [
+        { value: c(9), label: 'تطبيقات منشورة على المتاجر' },
+        { value: '+' + c(5), label: 'سنوات خبرة في Flutter' },
+        { value: c(7), label: 'مشاريع قيد التطوير' },
+        { value: c(3), label: 'شركات عملت معها' }
+      ],
+      marquee: apps.concat(apps),
+      featured: [
+        { name: 'Ranisy Logistics', icon: I.ranisy, meta: 'GAIT · لوجستيات · 2026', tint: 'rgba(79,209,255,.6)',
+          shot1: '/_blob/ee0ea38d34ea549d55710213ca963cc3', shot2: '/_blob/eb99df01cbd3b78c24c0a55f2c212266',
+          desc: 'منصة تجمع التخليص الجمركي وإدارة النقل والتوصيل في تطبيق واحد للأفراد والشركات.',
+          features: ['تتبع الشحنات على الخريطة', 'حساب الرسوم الجمركية', 'صلاحيات متعددة', 'إشعارات فورية'],
+          role: 'تطوير التطبيق بالكامل بـ Flutter، والتتبع والإشعارات، ولوحة التحكم، والنشر على المتجرين.' },
+        { name: 'شعائر', icon: I.shaair, meta: 'GAIT · تطبيق إسلامي · 2026', tint: 'rgba(230,160,60,.55)',
+          shot1: '/_blob/c22acdfb9a7529796137355fd738ae14', shot2: '/_blob/98256355a655d80df9aba773d6cf2f6f',
+          desc: 'مواقيت الصلاة والأذكار والقرآن الكريم، مع وضع حفظ بالتكرار وودجت للشاشة الرئيسية.',
+          features: ['11 قارئًا', 'يعمل بدون إنترنت', 'ودجت للشاشة الرئيسية', 'عربي وإنجليزي'],
+          role: 'تطوير معظم التطبيق بـ Flutter والنشر والتحديثات على المتجرين.' },
+        { name: 'Rawabit', icon: I.rawabit, meta: 'Nadeer · نظام ERP · 2025', tint: 'rgba(139,92,255,.6)',
+          shot1: '/_blob/02dddcac1951d7fe5e43ca7e1b7c84df', shot2: '/_blob/999bf5319f1d3cbc990e5bae8d2c71de',
+          desc: 'نظام ERP للشركات يجمع المحاسبة والموارد البشرية وإدارة العملاء في تطبيق واحد.',
+          features: ['الفواتير والقيود', 'الحضور والرواتب', 'CRM', 'تقارير لحظية'],
+          role: 'تطوير الشاشات بـ Clean Architecture وBLoC، والتعامل مع كميات كبيرة من البيانات.' }
+      ],
+      more: [
+        { name: 'A One Vet', icon: I.aonevet, line: 'متجر للأدوية والمستلزمات البيطرية.', status: 'منشور', statusColor: live },
+        { name: '3M & Solitaire', icon: I.m3, line: 'تتبع الشحنات والتخليص الجمركي لحظيًا.', status: 'منشور', statusColor: live },
+        { name: '168', icon: I.a168, line: 'إدارة المهام ومتابعة الإنتاجية.', status: 'منشور', statusColor: live },
+        { name: 'أكاديمية الأركان', icon: I.arkan, line: 'محاضرات واختبارات لطلاب الأكاديمية.', status: 'منشور', statusColor: live },
+        { name: 'MicroPet', icon: I.micropet, line: 'تسجيل شرائح الحيوانات الأليفة.', status: 'منشور', statusColor: live },
+        { name: 'Cavo Egypt', icon: I.cavo, line: 'تطبيق متجر لشركة Cavo Egypt.', status: 'منشور', statusColor: live }
+      ],
+      jobs: [
+        { period: '2021', company: 'عمل حر', role: 'Flutter Developer' },
+        { period: '2021 - 2022', company: 'ScopeLinks', role: 'Mobile Application Developer' },
+        { period: '2022 - 2023', company: 'ScopeLinks', role: 'Flutter Developer' },
+        { period: '2023 - 2025', company: 'Nadeer', role: 'Flutter Developer' },
+        { period: '2025 - الآن', company: 'GAIT', role: 'Flutter Developer' }
+      ]
+    };
+  }
+}
+</script>
+</body>
+</html>

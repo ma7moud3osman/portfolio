@@ -1,0 +1,39 @@
+{
+  "order": 160,
+  "status": "published",
+  "featured": false,
+  "group": "business",
+  "company": "ScopeLinks",
+  "name_ar": "Cavo Egypt",
+  "name_en": "Cavo Egypt",
+  "category_ar": "تجارة إلكترونية",
+  "category_en": "E-commerce",
+  "description_ar": "متجر لمنتجات Cavo لتصنيع الكابلات والإكسسوارات.",
+  "description_en": "A store for Cavo cables and accessories.",
+  "features_ar": [
+    "كتالوج المنتجات",
+    "سلة وطلبات",
+    "تتبع الطلب",
+    "عروض"
+  ],
+  "features_en": [
+    "Product catalog",
+    "Cart and orders",
+    "Order tracking",
+    "Offers"
+  ],
+  "role_ar": "تطوير التطبيق بـ Flutter",
+  "role_en": "Building the app in Flutter",
+  "stack": "Flutter · REST APIs",
+  "icon": "/uploads/projects/cavo/icon.png",
+  "screens": [
+    "/uploads/projects/cavo/screen-1.jpg",
+    "/uploads/projects/cavo/screen-2.jpg"
+  ],
+  "landscape": false,
+  "logo_only": false,
+  "tint": "#E9E4DE",
+  "accent": "#5A4632",
+  "play_url": "https://play.google.com/store/apps/details?id=com.scopelinks.cavo_egypt",
+  "appstore_url": ""
+}

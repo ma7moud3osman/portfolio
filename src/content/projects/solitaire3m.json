@@ -1,0 +1,39 @@
+{
+  "order": 130,
+  "status": "published",
+  "featured": false,
+  "group": "business",
+  "company": "GAIT",
+  "year": 2026,
+  "name_ar": "3M & Solitaire",
+  "name_en": "3M & Solitaire",
+  "category_ar": "لوجستيات",
+  "category_en": "Logistics",
+  "description_ar": "تطبيق لوجستي لإدارة الشحنات والتخليص الجمركي وتتبعها لحظيًا.",
+  "description_en": "A logistics app for managing and tracking shipments and customs clearance in real time.",
+  "features_ar": [
+    "تتبع لحظي",
+    "إشعارات فورية",
+    "إدارة الشحنات",
+    "التخليص الجمركي"
+  ],
+  "features_en": [
+    "Live tracking",
+    "Instant notifications",
+    "Shipment management",
+    "Customs clearance"
+  ],
+  "role_ar": "التطبيق والصيانة المستمرة",
+  "role_en": "The app and ongoing maintenance",
+  "stack": "Flutter · Firebase · Google Maps",
+  "icon": "/uploads/projects/solitaire3m/icon.jpg",
+  "screens": [
+    "/uploads/projects/solitaire3m/screen-1.jpg"
+  ],
+  "landscape": false,
+  "logo_only": false,
+  "tint": "#F5E3D9",
+  "accent": "#B4541F",
+  "play_url": "https://play.google.com/store/apps/details?id=com.GAIT.solitaire3m",
+  "appstore_url": "https://apps.apple.com/eg/app/id6759489202"
+}

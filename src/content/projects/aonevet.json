@@ -1,0 +1,40 @@
+{
+  "order": 120,
+  "status": "published",
+  "featured": false,
+  "group": "business",
+  "company": "GAIT",
+  "year": 2026,
+  "name_ar": "A One Vet",
+  "name_en": "A One Vet",
+  "category_ar": "تجارة إلكترونية",
+  "category_en": "E-commerce",
+  "description_ar": "متجر للأدوية والمستلزمات البيطرية للأطباء والمزارعين، من الكتالوج حتى تتبع الطلب.",
+  "description_en": "A store for veterinary medicines and supplies for vets and farmers, from catalog to order tracking.",
+  "features_ar": [
+    "كتالوج شامل",
+    "بحث وفلترة",
+    "تتبع الطلبات",
+    "لوحة تحكم"
+  ],
+  "features_en": [
+    "Full catalog",
+    "Search and filters",
+    "Order tracking",
+    "Admin panel"
+  ],
+  "role_ar": "التطبيق وأجزاء من الـ Back-end",
+  "role_en": "The app and parts of the back end",
+  "stack": "Flutter · Laravel",
+  "icon": "/uploads/projects/aonevet/icon.jpg",
+  "screens": [
+    "/uploads/projects/aonevet/screen-1.jpg",
+    "/uploads/projects/aonevet/screen-2.jpg"
+  ],
+  "landscape": false,
+  "logo_only": false,
+  "tint": "#D8F0E4",
+  "accent": "#0F7A55",
+  "play_url": "https://play.google.com/store/apps/details?id=com.GAIT.aonevetApp",
+  "appstore_url": "https://apps.apple.com/eg/app/a-one-vet/id6760313342"
+}

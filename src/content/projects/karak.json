@@ -1,0 +1,41 @@
+{
+  "order": 60,
+  "status": "published",
+  "featured": false,
+  "group": "game",
+  "company": "GAIT",
+  "year": 2026,
+  "name_ar": "كرك وأسئلة",
+  "name_en": "Karak & Questions",
+  "category_ar": "لعبة مسابقات",
+  "category_en": "Trivia game",
+  "description_ar": "لعبة مسابقات عربية للتجمعات: فريقان وجهًا لوجه، سؤال بسؤال، وكل جولة بطريقة لعب مختلفة.",
+  "description_en": "An Arabic team trivia game for gatherings: two teams head to head, one question at a time, each round played a different way.",
+  "features_ar": [
+    "فريقان وجهًا لوجه",
+    "جولات متنوعة",
+    "عرض على الشاشة الكبيرة",
+    "بالعربية"
+  ],
+  "features_en": [
+    "Two teams head to head",
+    "Varied rounds",
+    "Big-screen mode",
+    "In Arabic"
+  ],
+  "role_ar": "اللعبة والـ Back-end",
+  "role_en": "The game and the back end",
+  "stack": "Flutter · Laravel · Realtime",
+  "icon": "/uploads/projects/karak/icon.jpg",
+  "screens": [
+    "/uploads/projects/karak/screen-1.jpg",
+    "/uploads/projects/karak/screen-2.jpg",
+    "/uploads/projects/karak/screen-3.jpg"
+  ],
+  "landscape": true,
+  "logo_only": false,
+  "tint": "#F6E0D4",
+  "accent": "#C2541F",
+  "play_url": "https://play.google.com/store/apps/details?id=com.gaitco.karak",
+  "appstore_url": "https://apps.apple.com/eg/app/karak-questions/id6802631328"
+}

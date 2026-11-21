@@ -1,0 +1,55 @@
+---
+import '../styles/global.css';
+import { site } from '../data/load';
+import type { Lang } from '../i18n/ui';
+
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const name = site.name;
+const title = `${name} | ${lang === 'ar' ? site.title_ar : site.title_en}`;
+const description = lang === 'ar' ? site.seo_description_ar : site.seo_description_en;
+const base = Astro.site ?? new URL('https://example.com');
+const arUrl = new URL('/', base).href;
+const enUrl = new URL('/en/', base).href;
+const canonical = lang === 'ar' ? arUrl : enUrl;
+const image = new URL(site.photo, base).href;
+const person = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  name: site.name,
+  jobTitle: site.title_en,
+  email: `mailto:${site.email}`,
+  image,
+  url: arUrl,
+  sameAs: [site.linkedin, site.github, site.mostaql].filter(Boolean),
+};
+---
+<!doctype html>
+<html lang={lang} dir={lang === 'ar' ? 'rtl' : 'ltr'}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    <link rel="alternate" hreflang="ar" href={arUrl} />
+    <link rel="alternate" hreflang="en" href={enUrl} />
+    <link rel="alternate" hreflang="x-default" href={arUrl} />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={image} />
+    <meta property="og:locale" content={lang === 'ar' ? 'ar_EG' : 'en_US'} />
+    <meta name="twitter:card" content="summary" />
+    <meta name="theme-color" content="#F6F6F8" />
+    <link rel="icon" href={site.photo} />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Reem+Kufi:wght@500;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600&display=swap" rel="stylesheet" />
+    <script type="application/ld+json" set:html={JSON.stringify(person)} />
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>

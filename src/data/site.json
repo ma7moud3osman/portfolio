@@ -1,0 +1,124 @@
+{
+  "name": "Mahmoud Othman",
+  "title_ar": "مطوّر تطبيقات Flutter وLaravel",
+  "title_en": "Flutter & Laravel developer",
+  "headline_ar": "أطوّر تطبيقات يستخدمها الناس كل يوم.",
+  "headline_en": "I build apps people use every day.",
+  "seo_description_ar": "Mahmoud Othman، مطوّر تطبيقات موبايل بـ Flutter ولوحات تحكم بـ Laravel. تطبيقات منشورة على Google Play وApp Store من الفكرة حتى النشر والتحديثات.",
+  "seo_description_en": "Mahmoud Othman, Flutter mobile developer and Laravel back-end developer. Apps live on Google Play and the App Store, from idea to launch and updates.",
+  "photo": "/uploads/site/profile.png",
+  "email": "m.3osman99@gmail.com",
+  "cv": "",
+  "linkedin": "https://www.linkedin.com/in/ma7moud3osman",
+  "github": "https://github.com/ma7moud3osman",
+  "mostaql": "https://mostaql.com/u/ma7moud3osman",
+  "years_experience": 5,
+  "companies_count": 3,
+  "hero_apps": [
+    "ranisy",
+    "haqlex",
+    "shaair",
+    "labx",
+    "micropet",
+    "kease",
+    "rawabit",
+    "aonevet"
+  ],
+  "skills": [
+    "Flutter",
+    "Dart",
+    "Laravel",
+    "Filament",
+    "Firebase",
+    "REST APIs",
+    "BLoC",
+    "Provider",
+    "Clean Architecture",
+    "Google Maps"
+  ],
+  "steps": [
+    {
+      "title_ar": "الفكرة والتخطيط",
+      "title_en": "Idea and planning",
+      "body_ar": "نحدد المستخدمين والمزايا الأساسية وخطة الإصدار الأول.",
+      "body_en": "We define the users, the core features and the plan for the first release."
+    },
+    {
+      "title_ar": "التصميم",
+      "title_en": "Design",
+      "body_ar": "شاشات واضحة بالعربية والإنجليزية قبل كتابة أي كود.",
+      "body_en": "Clear screens in Arabic and English before any code is written."
+    },
+    {
+      "title_ar": "التطوير والربط",
+      "title_en": "Build and integrate",
+      "body_ar": "تطبيق Flutter مع Back-end ولوحة تحكم بـ Laravel.",
+      "body_en": "A Flutter app with a Laravel back end and admin panel."
+    },
+    {
+      "title_ar": "النشر والمتابعة",
+      "title_en": "Launch and support",
+      "body_ar": "النشر على المتجرين، ثم التحديثات وإصلاح المشكلات.",
+      "body_en": "Release on both stores, then updates and fixes."
+    }
+  ],
+  "experience": [
+    {
+      "company_ar": "GAIT",
+      "company_en": "GAIT",
+      "period_ar": "2025 - الآن",
+      "period_en": "2025 - present",
+      "role_ar": "Flutter Developer",
+      "role_en": "Flutter Developer",
+      "color": "#2853D6",
+      "apps": [
+        "ranisy",
+        "haqlex",
+        "labx",
+        "domono",
+        "karak",
+        "shaair"
+      ]
+    },
+    {
+      "company_ar": "Nadeer",
+      "company_en": "Nadeer",
+      "period_ar": "2023 - 2025",
+      "period_en": "2023 - 2025",
+      "role_ar": "Flutter Developer",
+      "role_en": "Flutter Developer",
+      "color": "#6D3FD0",
+      "apps": [
+        "rawabit",
+        "app168",
+        "jawab"
+      ]
+    },
+    {
+      "company_ar": "ScopeLinks",
+      "company_en": "ScopeLinks",
+      "period_ar": "2021 - 2023",
+      "period_en": "2021 - 2023",
+      "role_ar": "Mobile Application Developer",
+      "role_en": "Mobile Application Developer",
+      "color": "#1F5F9E",
+      "apps": [
+        "arkan",
+        "cavo",
+        "eastern"
+      ]
+    },
+    {
+      "company_ar": "عمل حر",
+      "company_en": "Freelance",
+      "period_ar": "2021",
+      "period_en": "2021",
+      "role_ar": "Flutter Developer",
+      "role_en": "Flutter Developer",
+      "color": "#4B4FC9",
+      "apps": [
+        "micropet"
+      ]
+    }
+  ]
+}

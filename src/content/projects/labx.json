@@ -1,0 +1,41 @@
+{
+  "order": 30,
+  "status": "published",
+  "featured": false,
+  "group": "business",
+  "company": "GAIT",
+  "year": 2026,
+  "name_ar": "LabX Tech",
+  "name_en": "LabX Tech",
+  "category_ar": "معدات معامل",
+  "category_en": "Lab equipment",
+  "description_ar": "من اختيار معدات المعامل حتى خدمة ما بعد البيع، في تطبيق واحد.",
+  "description_en": "From choosing laboratory equipment to after-sales care, in one app.",
+  "features_ar": [
+    "كتالوج المعدات ومقارنتها",
+    "طلب عروض الأسعار",
+    "متابعة الصيانة والزيارات",
+    "خدمة ما بعد البيع"
+  ],
+  "features_en": [
+    "Equipment catalog and comparison",
+    "Quotation requests",
+    "Maintenance and visit tracking",
+    "After-sales service"
+  ],
+  "role_ar": "التطبيق ولوحة التحكم",
+  "role_en": "The app and the admin panel",
+  "stack": "Flutter · Laravel · Filament",
+  "icon": "/uploads/projects/labx/icon.jpg",
+  "screens": [
+    "/uploads/projects/labx/screen-1.jpg",
+    "/uploads/projects/labx/screen-2.jpg",
+    "/uploads/projects/labx/screen-3.jpg"
+  ],
+  "landscape": false,
+  "logo_only": false,
+  "tint": "#D9F0F2",
+  "accent": "#0E7C86",
+  "play_url": "https://play.google.com/store/apps/details?id=com.gaitco.labx",
+  "appstore_url": "https://apps.apple.com/eg/app/labx-tech/id6822975196"
+}

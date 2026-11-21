@@ -1,0 +1,40 @@
+{
+  "order": 70,
+  "status": "published",
+  "featured": false,
+  "group": "life",
+  "company": "MicroVet",
+  "name_ar": "MicroPet",
+  "name_en": "MicroPet",
+  "category_ar": "حيوانات أليفة",
+  "category_en": "Pets",
+  "description_ar": "يساعد الحيوانات الأليفة المفقودة على العودة: معرّف MicroPet ورمز QR، ويصل إليك من يجده دون أن يرى رقمك.",
+  "description_en": "Helps lost pets get back home: a MicroPet ID and QR code, so whoever finds your pet can reach you without seeing your number.",
+  "features_ar": [
+    "معرّف ورمز QR لكل حيوان",
+    "تواصل دون كشف الرقم",
+    "بلاغات المفقودات",
+    "بيانات الشريحة"
+  ],
+  "features_en": [
+    "ID and QR code per pet",
+    "Contact without sharing your number",
+    "Lost and found reports",
+    "Microchip details"
+  ],
+  "role_ar": "التطبيق كاملًا",
+  "role_en": "The full app",
+  "stack": "Flutter · Firebase",
+  "icon": "/uploads/projects/micropet/icon.jpg",
+  "screens": [
+    "/uploads/projects/micropet/screen-1.jpg",
+    "/uploads/projects/micropet/screen-2.jpg",
+    "/uploads/projects/micropet/screen-3.jpg"
+  ],
+  "landscape": false,
+  "logo_only": false,
+  "tint": "#E4E6FA",
+  "accent": "#4B4FC9",
+  "play_url": "https://play.google.com/store/apps/details?id=com.microvet.micropet",
+  "appstore_url": "https://apps.apple.com/eg/app/micropet-microchip-lost-pet/id6821417728"
+}

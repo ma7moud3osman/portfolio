@@ -1,0 +1,41 @@
+{
+  "order": 140,
+  "status": "published",
+  "featured": false,
+  "group": "life",
+  "company": "ScopeLinks",
+  "year": 2022,
+  "name_ar": "أكاديمية الأركان",
+  "name_en": "Alarkan Academy",
+  "category_ar": "تعليم",
+  "category_en": "Education",
+  "description_ar": "تطبيق تعليمي فيه المحاضرات وفرص العمل ونتائج الاختبارات والحضور.",
+  "description_en": "An education app with lectures, job openings, exam results and attendance.",
+  "features_ar": [
+    "محاضرات مسجلة",
+    "نتائج الاختبارات",
+    "متابعة الحضور",
+    "فرص العمل"
+  ],
+  "features_en": [
+    "Recorded lectures",
+    "Exam results",
+    "Attendance tracking",
+    "Job openings"
+  ],
+  "role_ar": "التطبيق والنشر",
+  "role_en": "The app and store releases",
+  "stack": "Flutter · Firebase",
+  "icon": "/uploads/projects/arkan/icon.jpg",
+  "screens": [
+    "/uploads/projects/arkan/screen-1.jpg",
+    "/uploads/projects/arkan/screen-2.jpg",
+    "/uploads/projects/arkan/screen-3.jpg"
+  ],
+  "landscape": false,
+  "logo_only": false,
+  "tint": "#DFEAF6",
+  "accent": "#1F5F9E",
+  "play_url": "https://play.google.com/store/apps/details?id=com.scopelinks.arkan",
+  "appstore_url": "https://apps.apple.com/eg/app/id1605382799"
+}

@@ -1,0 +1,311 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<title>الاتجاه ج - المعرض التفاعلي</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Reem+Kufi:wght@500;700&amp;family=IBM+Plex+Sans+Arabic:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#F6F6F8}
+a{color:#101114;text-decoration:none}
+a:focus-visible,button:focus-visible{outline:3px solid #101114;outline-offset:3px}
+@keyframes rise{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:none}}
+@keyframes screenIn{from{opacity:0;transform:scale(1.04)}to{opacity:1;transform:none}}
+@keyframes infoIn{from{opacity:0;transform:translateX(-16px)}to{opacity:1;transform:none}}
+@keyframes breathe{0%,100%{transform:scale(1)}50%{transform:scale(1.06)}}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+@keyframes rv{from{opacity:0;transform:translateY(50px)}to{opacity:1;transform:none}}
+@supports (animation-timeline: view()){.rv{animation:rv linear both;animation-timeline:view();animation-range:entry 0% cover 25%}}
+.amb{transition:background-color .8s ease}
+.appBtn{transition:background .25s ease,transform .25s ease}.appBtn:hover{background:rgba(255,255,255,.75);transform:translateX(-4px)}
+.thumb{transition:transform .25s ease,opacity .25s ease}.thumb:hover{transform:translateY(-4px)}
+@media (max-width: 1000px){.room{grid-template-columns:1fr!important}.list{max-height:none!important;flex-direction:row!important;overflow-x:auto}}
+@media (prefers-reduced-motion: reduce){*{animation:none!important;transition:none!important}}
+</style>
+</helmet>
+<div dir="rtl" style="font-family: 'IBM Plex Sans Arabic', system-ui, sans-serif; color: #101114; background: #F6F6F8">
+
+  <header style="max-width: 1320px; margin: 0 auto; padding: 24px 40px; display: flex; flex-wrap: wrap; align-items: center; gap: 16px 40px">
+    <a href="#" style="font-family: 'Reem Kufi', sans-serif; font-weight: 700; font-size: 26px">محمود عثمان</a>
+    <nav aria-label="القائمة الرئيسية" style="display: flex; gap: 28px; flex-grow: 1; font-size: 16px">
+      <a href="#room">المعرض</a>
+      <a href="#journey">المسيرة</a>
+      <a href="#contact">التواصل</a>
+    </nav>
+    <a href="#" lang="en" style="font-size: 15px; color: #55596A">EN</a>
+    <a href="#" target="_blank" style="background: #101114; color: #FFFFFF; padding: 12px 22px; border-radius: 14px; font-size: 15px">السيرة الذاتية</a>
+  </header>
+
+  <section class="amb" style="background-color: {{ heroTint }}; transition: background-color .8s ease">
+    <div style="max-width: 1320px; margin: 0 auto; padding: 64px 40px; display: flex; flex-wrap: wrap; align-items: center; gap: 48px">
+      <div style="flex: 1 1 520px; min-width: 0; display: flex; flex-direction: column; gap: 24px">
+        <span style="align-self: flex-start; background: #FFFFFF; padding: 8px 16px; border-radius: 999px; font-size: 14px; font-weight: 500; animation: rise .8s ease both">{{ liveCount }} تطبيقًا منشورًا على Google Play وApp Store</span>
+        <h1 style="margin: 0; font-family: 'Reem Kufi', sans-serif; font-size: 76px; line-height: 1.15; font-weight: 700; animation: rise .9s .1s ease both">أطوّر تطبيقات يستخدمها الناس كل يوم.</h1>
+        <p style="margin: 0; font-size: 20px; line-height: 1.8; color: #2E3140; max-width: 30em; animation: rise .9s .2s ease both">تطبيقات Flutter لـ Android وiOS، ومعها الـ Back-end ولوحة التحكم بـ Laravel. من الفكرة حتى النشر والتحديثات.</p>
+        <div style="display: flex; gap: 12px; flex-wrap: wrap; animation: rise .9s .3s ease both">
+          <a href="#room" style="background: #101114; color: #FFFFFF; padding: 16px 28px; border-radius: 16px; font-size: 17px; font-weight: 500">ادخل المعرض</a>
+          <a href="#contact" style="background: #FFFFFF; padding: 16px 28px; border-radius: 16px; font-size: 17px; font-weight: 500">تواصل معي</a>
+        </div>
+      </div>
+      <div style="flex: 0 1 420px; display: flex; align-items: center; gap: 28px; justify-content: center">
+        <div style="display: flex; flex-direction: column; gap: 10px; align-items: flex-start; min-width: 140px">
+          <span style="font-size: 13px; color: #55596A">يعرض الآن</span>
+          <sc-for list="{{ heroNow }}" as="h" hint-placeholder-count="1">
+            <div style="display: flex; flex-direction: column; gap: 10px; animation: infoIn .5s ease both">
+              <img src="{{ h.icon }}" alt="" style="width: 64px; height: 64px; border-radius: 16px; box-shadow: 0 10px 24px rgba(0,0,0,.12)">
+              <span style="font-family: 'Reem Kufi', sans-serif; font-size: 24px; font-weight: 700">{{ h.name }}</span>
+              <span style="font-size: 14px; color: #55596A">{{ h.cat }}</span>
+            </div>
+          </sc-for>
+        </div>
+        <div style="width: 250px; height: 540px; border-radius: 42px; background: #101114; padding: 9px; box-sizing: border-box; box-shadow: 0 40px 80px rgba(16,17,20,.25); animation: float 6s ease-in-out infinite; flex: 0 0 auto">
+          <div style="width: 100%; height: 100%; border-radius: 34px; overflow: hidden; background: #222">
+            <sc-for list="{{ heroNow }}" as="h" hint-placeholder-count="1">
+              <img src="{{ h.shot }}" alt="شاشة من {{ h.name }}" style="width: 100%; height: 100%; object-fit: cover; object-position: top; display: block; animation: screenIn .6s ease both">
+            </sc-for>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="room" class="amb" style="background-color: {{ tint }}; padding: 80px 0">
+    <div style="max-width: 1320px; margin: 0 auto; padding: 0 40px; display: flex; flex-direction: column; gap: 28px">
+      <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 16px">
+        <div style="display: flex; flex-direction: column; gap: 8px">
+          <h2 style="margin: 0; font-family: 'Reem Kufi', sans-serif; font-size: 56px; font-weight: 700">المعرض</h2>
+          <p style="margin: 0; font-size: 17px; color: #2E3140">اختر تطبيقًا لترى شاشاته ومزاياه ودوري فيه.</p>
+        </div>
+        <div style="display: flex; gap: 8px; flex-wrap: wrap; align-items: center">
+          <div role="group" aria-label="تصنيف التطبيقات" style="display: flex; gap: 4px; background: rgba(255,255,255,.6); padding: 5px; border-radius: 14px">
+            <sc-for list="{{ cats }}" as="c" hint-placeholder-count="5">
+              <button type="button" onClick="{{ c.pick }}" aria-pressed="{{ c.pressed }}" style="border: 0; cursor: pointer; font: inherit; font-size: 14px; padding: 9px 16px; border-radius: 10px; background: {{ c.bg }}; color: {{ c.fg }}">{{ c.label }}</button>
+            </sc-for>
+          </div>
+          <button type="button" onClick="{{ toggleAuto }}" aria-pressed="{{ autoPressed }}" style="border: 0; cursor: pointer; font: inherit; font-size: 14px; padding: 12px 16px; border-radius: 14px; background: #FFFFFF">{{ autoLabel }}</button>
+        </div>
+      </div>
+
+      <div class="room" style="display: grid; grid-template-columns: 280px minmax(0, 1fr) minmax(0, 1.1fr); gap: 32px; align-items: start">
+        <div class="list" role="listbox" aria-label="التطبيقات" style="display: flex; flex-direction: column; gap: 4px; max-height: 640px; overflow-y: auto; background: rgba(255,255,255,.45); border-radius: 24px; padding: 8px">
+          <sc-for list="{{ list }}" as="a" hint-placeholder-count="10">
+            <button type="button" class="appBtn" role="option" aria-selected="{{ a.selected }}" onClick="{{ a.pick }}" style="display: flex; align-items: center; gap: 12px; border: 0; cursor: pointer; font: inherit; text-align: right; padding: 10px 12px; border-radius: 16px; background: {{ a.bg }}; box-shadow: {{ a.shadow }}; flex: 0 0 auto; min-width: 220px">
+              <img src="{{ a.icon }}" alt="" style="width: 44px; height: 44px; border-radius: 12px">
+              <span style="display: flex; flex-direction: column; gap: 2px">
+                <span style="font-size: 16px; font-weight: 600">{{ a.name }}</span>
+                <span style="font-size: 13px; color: #55596A">{{ a.cat }}</span>
+              </span>
+            </button>
+          </sc-for>
+        </div>
+
+        <div style="display: flex; flex-direction: column; align-items: center; gap: 20px; padding-top: 8px">
+          <div aria-hidden="true" style="position: relative; display: flex; justify-content: center; align-items: center; min-height: 600px; width: 100%">
+            <div style="position: absolute; width: 360px; height: 360px; border-radius: 50%; background: rgba(255,255,255,.55); animation: breathe 6s ease-in-out infinite"></div>
+            <sc-if value="{{ cur.landscape }}" hint-placeholder-val="{{ false }}">
+              <div style="position: relative; width: 100%; max-width: 560px; aspect-ratio: 2.17; border-radius: 34px; background: #101114; padding: 10px; box-sizing: border-box; box-shadow: 0 40px 80px rgba(16,17,20,.28)">
+                <div style="width: 100%; height: 100%; border-radius: 26px; overflow: hidden">
+                  <sc-for list="{{ curShot }}" as="s" hint-placeholder-count="1"><img src="{{ s }}" alt="شاشة من {{ cur.name }}" style="width: 100%; height: 100%; object-fit: cover; display: block; animation: screenIn .5s ease both"></sc-for>
+                </div>
+              </div>
+            </sc-if>
+            <sc-if value="{{ cur.portrait }}" hint-placeholder-val="{{ true }}">
+              <div style="position: relative; width: 278px; height: 600px; border-radius: 46px; background: #101114; padding: 10px; box-sizing: border-box; box-shadow: 0 40px 80px rgba(16,17,20,.28)">
+                <div style="width: 100%; height: 100%; border-radius: 37px; overflow: hidden; background: #222">
+                  <sc-for list="{{ curShot }}" as="s" hint-placeholder-count="1"><img src="{{ s }}" alt="شاشة من {{ cur.name }}" style="width: 100%; height: 100%; object-fit: {{ cur.fit }}; object-position: {{ cur.pos }}; background: #FFFFFF; display: block; animation: screenIn .5s ease both"></sc-for>
+                </div>
+              </div>
+            </sc-if>
+          </div>
+          <div style="display: flex; gap: 10px">
+            <sc-for list="{{ thumbs }}" as="t" hint-placeholder-count="2">
+              <button type="button" class="thumb" onClick="{{ t.pick }}" aria-label="الشاشة {{ t.n }}" aria-pressed="{{ t.pressed }}" style="border: 3px solid {{ t.border }}; padding: 0; border-radius: 12px; overflow: hidden; cursor: pointer; background: #101114; width: {{ t.w }}; height: {{ t.h }}">
+                <img src="{{ t.src }}" alt="" style="width: 100%; height: 100%; object-fit: cover; object-position: top; display: block">
+              </button>
+            </sc-for>
+          </div>
+        </div>
+
+        <sc-for list="{{ curList }}" as="d" hint-placeholder-count="1">
+          <article aria-live="polite" style="background: #FFFFFF; border-radius: 28px; padding: 32px; display: flex; flex-direction: column; gap: 18px; animation: infoIn .5s ease both; box-shadow: 0 20px 50px rgba(16,17,20,.06)">
+            <div style="display: flex; align-items: center; gap: 14px">
+              <img src="{{ d.icon }}" alt="" style="width: 64px; height: 64px; border-radius: 16px">
+              <div style="display: flex; flex-direction: column; gap: 2px">
+                <h3 style="margin: 0; font-family: 'Reem Kufi', sans-serif; font-size: 32px; font-weight: 700">{{ d.name }}</h3>
+                <span style="font-size: 14px; color: #55596A">{{ d.meta }}</span>
+              </div>
+            </div>
+            <p style="margin: 0; font-size: 18px; line-height: 1.8; color: #2E3140">{{ d.desc }}</p>
+            <ul style="margin: 0; padding: 0; list-style: none; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px">
+              <sc-for list="{{ d.features }}" as="f" hint-placeholder-count="4">
+                <li style="display: flex; gap: 8px; align-items: flex-start; font-size: 15px; line-height: 1.6; color: #2E3140"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="{{ d.accent }}" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: 0 0 auto; margin-top: 3px"><path d="M5 12l5 5L20 7"/></svg>{{ f }}</li>
+              </sc-for>
+            </ul>
+            <dl style="margin: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; background: #F6F6F8; border-radius: 18px; padding: 16px">
+              <div><dt style="font-size: 13px; color: #55596A">دوري</dt><dd style="margin: 4px 0 0; font-size: 15px; font-weight: 600; line-height: 1.5">{{ d.role }}</dd></div>
+              <div><dt style="font-size: 13px; color: #55596A">التقنيات</dt><dd lang="en" style="margin: 4px 0 0; font-size: 15px; font-weight: 600; line-height: 1.5">{{ d.stack }}</dd></div>
+            </dl>
+            <div style="display: flex; gap: 10px; flex-wrap: wrap">
+              <sc-if value="{{ d.android }}" hint-placeholder-val="{{ true }}"><a href="#" target="_blank" style="background: #101114; color: #FFFFFF; padding: 13px 22px; border-radius: 14px; font-size: 15px">Google Play</a></sc-if>
+              <sc-if value="{{ d.ios }}" hint-placeholder-val="{{ true }}"><a href="#" target="_blank" style="background: #101114; color: #FFFFFF; padding: 13px 22px; border-radius: 14px; font-size: 15px">App Store</a></sc-if>
+            </div>
+          </article>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <section style="max-width: 1320px; margin: 0 auto; padding: 80px 40px">
+    <div class="rv" style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px">
+      <sc-for list="{{ stats }}" as="s" hint-placeholder-count="4">
+        <div style="background: #FFFFFF; border-radius: 24px; padding: 28px; display: flex; flex-direction: column; gap: 6px">
+          <span style="font-family: 'Reem Kufi', sans-serif; font-size: 56px; font-weight: 700; line-height: 1">{{ s.v }}</span>
+          <span style="font-size: 15px; color: #55596A">{{ s.l }}</span>
+        </div>
+      </sc-for>
+    </div>
+  </section>
+
+  <section id="journey" style="max-width: 1320px; margin: 0 auto; padding: 0 40px 80px; display: flex; flex-direction: column; gap: 28px">
+    <h2 class="rv" style="margin: 0; font-family: 'Reem Kufi', sans-serif; font-size: 56px; font-weight: 700">المسيرة</h2>
+    <ol style="list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px">
+      <sc-for list="{{ jobs }}" as="j" hint-placeholder-count="4">
+        <li class="rv" style="background: #FFFFFF; border-radius: 24px; padding: 24px; display: flex; flex-direction: column; gap: 10px; border-top: 5px solid {{ j.c }}">
+          <span style="font-size: 14px; color: #55596A">{{ j.p }}</span>
+          <span style="font-family: 'Reem Kufi', sans-serif; font-size: 28px; font-weight: 700">{{ j.co }}</span>
+          <span style="font-size: 15px; color: #2E3140; line-height: 1.6">{{ j.r }}</span>
+          <div style="display: flex; gap: 6px; margin-top: 6px">
+            <sc-for list="{{ j.apps }}" as="ai" hint-placeholder-count="3"><img src="{{ ai }}" alt="" style="width: 32px; height: 32px; border-radius: 9px"></sc-for>
+          </div>
+        </li>
+      </sc-for>
+    </ol>
+  </section>
+
+  <footer id="contact" style="background: #101114; color: #FFFFFF">
+    <div class="rv" style="max-width: 1320px; margin: 0 auto; padding: 88px 40px; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 32px">
+      <h2 style="margin: 0; font-family: 'Reem Kufi', sans-serif; font-size: 64px; font-weight: 700; line-height: 1.2">التطبيق القادم في المعرض<br>قد يكون تطبيقك.</h2>
+      <div style="display: flex; flex-direction: column; gap: 14px; align-items: flex-start">
+        <a href="mailto:m.3osman99@gmail.com" style="background: #FFFFFF; color: #101114; padding: 18px 32px; border-radius: 16px; font-size: 18px; font-weight: 600">راسلني عبر البريد</a>
+        <div style="display: flex; gap: 20px; font-size: 15px">
+          <a href="#" target="_blank" style="color: #C9CBD6">LinkedIn</a>
+          <a href="#" target="_blank" style="color: #C9CBD6">GitHub</a>
+          <a href="#" target="_blank" style="color: #C9CBD6">مستقل</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":3300}}'>
+class Component extends DCLogic {
+  constructor(p) { super(p); this.state = { sel: 0, shot: 0, cat: 'all', auto: true, hero: 0, tick: 0 }; }
+  componentDidMount() {
+    this.iv = setInterval(() => {
+      const s = this.state, apps = this.apps();
+      const next = { hero: (s.hero + 1) % apps.length, tick: s.tick + 1 };
+      if (s.auto && s.tick % 2 === 1) {
+        const cur = apps[s.sel];
+        if (s.shot + 1 < cur.shots.length) next.shot = s.shot + 1;
+        else { const pool = apps.map((a, i) => i).filter(i => this.inCat(apps[i], s.cat)); const pos = pool.indexOf(s.sel); next.sel = pool[(pos + 1) % pool.length]; next.shot = 0; }
+      }
+      this.setState(next);
+    }, 1800);
+  }
+  componentWillUnmount() { clearInterval(this.iv); }
+  inCat(a, c) { return c === 'all' || a.group === c; }
+  apps() {
+    const b = (id) => '/_blob/' + id;
+    return [
+      { name: 'Ranisy Logistics', group: 'biz', cat: 'لوجستيات', icon: b('acb13b1785673e44adc10a1d005868f4'), tint: '#DCE6FF', accent: '#2853D6', meta: 'GAIT · 2026', android: true, ios: true,
+        shots: [b('ee0ea38d34ea549d55710213ca963cc3'), b('b0db2f9ccf65a5c096e642b8473f4e39'), b('eb99df01cbd3b78c24c0a55f2c212266')],
+        desc: 'منصة تجمع التخليص الجمركي وإدارة النقل والتوصيل في تطبيق واحد للأفراد والشركات.', features: ['حساب الرسوم الجمركية', 'تتبع الشحنة على الخريطة', 'توزيع الطلبات على السائقين', 'صلاحيات متعددة'], role: 'التطبيق كاملًا ولوحة التحكم والنشر', stack: 'Flutter · Laravel · Maps' },
+      { name: 'Haqlex', group: 'biz', cat: 'قانون', icon: b('e8cf3477925aaa899ecb7d5246d3858b'), tint: '#E9E3D6', accent: '#7A5A1E', meta: 'GAIT · 2026', android: true, ios: true,
+        shots: [b('acb144756a950348d60a480c0e9362e7'), b('7291bf064d90fd9b07fe11f6f6f1e259')],
+        desc: 'رفيق مكتب المحاماة: القضايا والجلسات في جيبك، يعمل بدون إنترنت ويتزامن مع كمبيوتر المكتب على الشبكة المحلية.', features: ['لوحة مهام اليوم', 'بحث في سجلات المكتب', 'مزامنة على الشبكة المحلية', 'ودجت للشاشة الرئيسية'], role: 'تطبيقات الموبايل وسطح المكتب', stack: 'Flutter · Desktop · Laravel' },
+      { name: 'LabX Tech', group: 'biz', cat: 'معدات معامل', icon: b('c4d2abfc1b49724b150cbb194c68cdeb'), tint: '#D9F0F2', accent: '#0E7C86', meta: 'GAIT · 2026', android: true, ios: true,
+        shots: [b('1992f4ecb204886af5191e2f49ca214c'), b('d065036728977353997afac9a82f1f76')],
+        desc: 'من اختيار معدات المعامل حتى خدمة ما بعد البيع، في تطبيق واحد.', features: ['كتالوج المعدات ومقارنتها', 'طلب عروض الأسعار', 'متابعة الصيانة والزيارات', 'خدمة ما بعد البيع'], role: 'التطبيق ولوحة التحكم', stack: 'Flutter · Laravel · Filament' },
+      { name: 'شعائر', group: 'life', cat: 'تطبيق إسلامي', icon: b('442309028bba453e85c7a3c72e4ed39a'), tint: '#F1E8DA', accent: '#B4761F', meta: 'GAIT · 2026', android: true, ios: true,
+        shots: [b('c22acdfb9a7529796137355fd738ae14'), b('98256355a655d80df9aba773d6cf2f6f')],
+        desc: 'مواقيت الصلاة والأذكار والقرآن الكريم، مع حفظ بالتكرار وودجت يتحدث والتطبيق مغلق.', features: ['11 قارئًا', 'يعمل بدون إنترنت', 'ودجت للشاشة الرئيسية', 'عربي وإنجليزي'], role: 'معظم التطبيق والنشر', stack: 'Flutter · Widgets' },
+      { name: 'Domono', group: 'game', cat: 'لعبة جماعية', landscape: true, icon: b('2e577ceb25e797ca869c0a897dd50f26'), tint: '#DDEBDD', accent: '#2F7D3B', meta: 'GAIT · 2026', android: true, ios: true,
+        shots: [b('aa898cb4263c6c6a61888a7141dc5d32'), b('ea08ed56fd3697a25e264c2b1bac3e7b')],
+        desc: 'مقهى دومينو مصري على موبايلك: العب أونلاين، أو ادعُ أصدقاءك لطاولة خاصة، أو تدرّب ضد الكمبيوتر بدون إنترنت.', features: ['مباريات أونلاين', 'طاولات خاصة للأصدقاء', 'اللعب ضد الكمبيوتر', 'بدون إنترنت'], role: 'اللعبة والـ Back-end', stack: 'Flutter · Laravel · Realtime' },
+      { name: 'كرك وأسئلة', group: 'game', cat: 'لعبة مسابقات', landscape: true, icon: b('2b9aa70812888f215c1caa9d96b68842'), tint: '#F6E0D4', accent: '#C2541F', meta: 'GAIT · 2026', android: true, ios: true,
+        shots: [b('251ebbf7b9bd63a71495f4893d2ef9bf'), b('71af62a571765c37f9897d5427e48f98')],
+        desc: 'لعبة مسابقات عربية للتجمعات: فريقان وجهًا لوجه، سؤال بسؤال، وكل جولة بطريقة لعب مختلفة.', features: ['فريقان وجهًا لوجه', 'جولات متنوعة', 'عرض على الشاشة الكبيرة', 'بالعربية'], role: 'اللعبة والـ Back-end', stack: 'Flutter · Laravel · Realtime' },
+      { name: 'MicroPet', group: 'life', cat: 'حيوانات أليفة', icon: b('a6bb33c1b41c22a0f5356058dabc2b27'), tint: '#E4E6FA', accent: '#4B4FC9', meta: 'MicroVet', android: true, ios: true,
+        shots: [b('1804cb5667372bd72b9073266d01533c'), b('34480d4e303d13fa24978ff0fe5e3add')],
+        desc: 'يساعد الحيوانات الأليفة المفقودة على العودة: معرّف MicroPet ورمز QR، ويصل إليك من يجده دون أن يرى رقمك.', features: ['معرّف ورمز QR لكل حيوان', 'تواصل دون كشف الرقم', 'بلاغات المفقودات', 'بيانات الشريحة'], role: 'التطبيق كاملًا', stack: 'Flutter · Firebase' },
+      { name: 'Kease', group: 'biz', cat: 'عقارات', icon: b('5cd3c0afd3cbcbc049a5e11431757b92'), tint: '#E6E1F5', accent: '#5B3DB5', meta: 'الرياض، السعودية', android: true, ios: true,
+        shots: [b('9573638e28c302821d1afa488e4431bc'), b('7f47f79aa1e991131be1b11ff2902b49')],
+        desc: 'تجربة متكاملة لعملاء الشقق السكنية الفاخرة في شمال الرياض.', features: ['استعراض الوحدات', 'الحجز والمتابعة', 'خدمات السكان', 'عربي وإنجليزي'], role: 'تطبيق Flutter ولوحة Laravel', stack: 'Flutter · Laravel' },
+      { name: 'Rawabit', group: 'biz', cat: 'نظام ERP', icon: b('85e80de27c30919b7c201b153b293a00'), tint: '#DDE3F3', accent: '#1E3A8A', meta: 'Nadeer · 2025', android: true, ios: true,
+        shots: [b('02dddcac1951d7fe5e43ca7e1b7c84df'), b('999bf5319f1d3cbc990e5bae8d2c71de')],
+        desc: 'محاسبة وموارد بشرية وإدارة عملاء في نظام واحد، مع تقارير لحظية لأداء الشركة.', features: ['الفواتير والقيود', 'الحضور والرواتب', 'CRM', 'تقارير لحظية'], role: 'الشاشات والربط بالـ APIs', stack: 'BLoC · Clean Architecture' },
+      { name: 'A One Vet', group: 'biz', cat: 'تجارة إلكترونية', icon: b('19f4869a25e350b7fc7ac7cb9aa16b66'), tint: '#D8F0E4', accent: '#0F7A55', meta: 'GAIT · 2026', android: true, ios: true,
+        shots: [b('9b6966d6c60644208f3addff953ab7e2'), b('3d233bcefad76c8fb335880940a7fe51')],
+        desc: 'متجر للأدوية والمستلزمات البيطرية للأطباء والمزارعين، من الكتالوج حتى تتبع الطلب.', features: ['كتالوج شامل', 'بحث وفلترة', 'تتبع الطلبات', 'لوحة تحكم'], role: 'التطبيق وأجزاء من الـ Back-end', stack: 'Flutter · Laravel' },
+      { name: '3M & Solitaire', group: 'biz', cat: 'لوجستيات', icon: b('1c77d4981b09f97b7671faefc3597164'), tint: '#F5E3D9', accent: '#B4541F', meta: 'GAIT · 2026', android: true, ios: true,
+        shots: [b('d9105c771c2b1dbf99016955c198e565')],
+        desc: 'تطبيق لوجستي لإدارة الشحنات والتخليص الجمركي وتتبعها لحظيًا.', features: ['تتبع لحظي', 'إشعارات فورية', 'إدارة الشحنات', 'التخليص الجمركي'], role: 'التطبيق والصيانة المستمرة', stack: 'Flutter · Firebase · Maps' },
+      { name: '168', group: 'life', cat: 'إنتاجية', icon: b('ed24bb7cc975342301acd2c1dcf02b64'), tint: '#ECE6FA', accent: '#6D3FD0', meta: 'Nadeer · 2024', android: true, ios: true,
+        shots: [b('8cb3e1eb15a9db87e04b4c81d0fea3f2')],
+        desc: 'تطبيق لإدارة المهام وتنظيم العمل ومتابعة الإنتاجية.', features: ['إنشاء المهام وتصنيفها', 'نسب الإنجاز', 'تذكيرات', 'تقارير الأداء'], role: 'الشاشات والمزايا', stack: 'BLoC · Clean Architecture' },
+      { name: 'أكاديمية الأركان', group: 'life', cat: 'تعليم', icon: b('372c7eb48f18ba7542253c231e4c5d32'), tint: '#DFEAF6', accent: '#1F5F9E', meta: 'ScopeLinks · 2022', playUrl: 'https://play.google.com/store/apps/details?id=com.scopelinks.arkan', iosUrl: 'https://apps.apple.com/eg/app/id1605382799', android: true, ios: true,
+        shots: [b('8585af2ba1e8d77f429faff3cabe8f41'), b('5d049083d19482324b8f69645b2e3ade'), b('1880cd66119ae284beec235c094d7701')],
+        desc: 'تطبيق تعليمي فيه المحاضرات وفرص العمل ونتائج الاختبارات والحضور.', features: ['محاضرات مسجلة', 'نتائج الاختبارات', 'متابعة الحضور', 'فرص العمل'], role: 'التطبيق والنشر', stack: 'Flutter · Firebase' },
+      { name: 'Jawab', group: 'life', cat: 'تعليم', icon: b('0484aca6bf7a2882cbd71bf98069f02c'), tint: '#E2ECF7', accent: '#1D5FA8', meta: 'Nadeer', android: false, ios: false, logoOnly: true,
+        shots: [b('0484aca6bf7a2882cbd71bf98069f02c')],
+        desc: 'منصة تعليمية للطلاب والمدرسين: بنوك أسئلة واختبارات، وتصحيح ونتائج، ومتابعة مستوى كل طالب.', features: ['بنوك أسئلة', 'اختبارات وكويزات', 'تصحيح ونتائج', 'حسابات للطلاب والمدرسين'], role: 'تطوير التطبيق بـ Flutter', stack: 'Flutter · Clean Architecture' },
+      { name: 'هايبر أسواق الشرقية', group: 'biz', cat: 'تجارة جملة', icon: b('e2dd38ecf5ac000c1cbbee9305e96a9b'), tint: '#FBE3E1', accent: '#C81E1E', meta: 'ScopeLinks', android: true, ios: false,
+        shots: [b('3c0994ee2edfbd635cbd1fc02a554391'), b('25f29eda8c577aaa14a13c9208283419')],
+        desc: 'متجر جملة للتجار من هايبر أسواق الشرقية: تصفح المنتجات والأسعار والطلب مباشرة.', features: ['حسابات للتجار', 'تصفح المنتجات والأسعار', 'سلة وطلبات', 'تسجيل الدخول بـ Google وFacebook'], role: 'تطوير التطبيق بـ Flutter', stack: 'Flutter · REST APIs' },
+      { name: 'Cavo Egypt', group: 'biz', cat: 'تجارة إلكترونية', icon: b('17ecfb7b3e9e6c2f775f0c64ed087395'), tint: '#E9E4DE', accent: '#5A4632', meta: 'ScopeLinks', android: true, ios: true,
+        shots: [b('d4f4225eff7de7aa832c2132f43778e1'), b('d5a3037774b5f16b0ff91b99350f5264')],
+        desc: 'متجر لمنتجات Cavo لتصنيع الكابلات والإكسسوارات.', features: ['كتالوج المنتجات', 'سلة وطلبات', 'تتبع الطلب', 'عروض'], role: 'تطوير التطبيق بـ Flutter', stack: 'Flutter · REST APIs' }
+    ];
+  }
+  renderVals() {
+    const apps = this.apps(), s = this.state;
+    const cur = apps[s.sel], shot = Math.min(s.shot, cur.shots.length - 1);
+    const hero = apps[s.hero];
+    const cats = [ ['all', 'الكل'], ['biz', 'أعمال'], ['life', 'حياة يومية'], ['game', 'ألعاب'] ];
+    const i = (n) => apps.find(a => a.name === n).icon;
+    return {
+      liveCount: apps.filter(a => a.android || a.ios).length,
+      heroTint: hero.tint,
+      heroNow: [{ ...hero, shot: hero.shots[0] }],
+      tint: cur.tint,
+      cats: cats.map(([id, label]) => ({ label, pressed: s.cat === id ? 'true' : 'false', bg: s.cat === id ? '#101114' : 'transparent', fg: s.cat === id ? '#FFFFFF' : '#101114',
+        pick: () => { const first = apps.findIndex(a => this.inCat(a, id)); this.setState({ cat: id, sel: first, shot: 0 }); } })),
+      autoLabel: s.auto ? 'إيقاف العرض التلقائي' : 'تشغيل العرض التلقائي',
+      autoPressed: s.auto ? 'true' : 'false',
+      toggleAuto: () => this.setState({ auto: !s.auto }),
+      list: apps.map((a, idx) => ({ ...a, idx })).filter(a => this.inCat(a, s.cat)).map(a => ({ ...a,
+        selected: a.idx === s.sel ? 'true' : 'false', bg: a.idx === s.sel ? '#FFFFFF' : 'transparent', shadow: a.idx === s.sel ? '0 8px 20px rgba(16,17,20,.08)' : 'none',
+        pick: () => this.setState({ sel: a.idx, shot: 0, auto: false }) })),
+      cur: { ...cur, portrait: !cur.landscape, landscape: !!cur.landscape, fit: cur.logoOnly ? 'contain' : 'cover', pos: cur.logoOnly ? 'center' : 'top' },
+      curShot: [cur.shots[shot]],
+      curList: [cur],
+      thumbs: cur.shots.map((src, n) => ({ src, n: n + 1, pressed: n === shot ? 'true' : 'false', border: n === shot ? cur.accent : 'transparent',
+        w: cur.landscape ? '110px' : '54px', h: cur.landscape ? '51px' : '112px', pick: () => this.setState({ shot: n, auto: false }) })),
+      stats: [ { v: apps.filter(a => a.android || a.ios).length, l: 'تطبيقًا منشورًا' }, { v: '+5', l: 'سنوات خبرة في Flutter' }, { v: '3', l: 'شركات' }, { v: '2', l: 'منصتان: Android وiOS' } ],
+      jobs: [
+        { p: '2025 - الآن', co: 'GAIT', r: 'Flutter Developer', c: '#2853D6', apps: [i('Ranisy Logistics'), i('Haqlex'), i('Domono'), i('شعائر')] },
+        { p: '2023 - 2025', co: 'Nadeer', r: 'Flutter Developer', c: '#6D3FD0', apps: [i('Rawabit'), i('168'), i('Jawab')] },
+        { p: '2021 - 2023', co: 'ScopeLinks', r: 'Mobile Application Developer', c: '#1F5F9E', apps: [i('أكاديمية الأركان'), i('Cavo Egypt'), i('هايبر أسواق الشرقية')] },
+        { p: '2021', co: 'عمل حر', r: 'Flutter Developer', c: '#4B4FC9', apps: [i('MicroPet')] }
+      ]
+    };
+  }
+}
+</script>
+</body>
+</html>

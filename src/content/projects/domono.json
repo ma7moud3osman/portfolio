@@ -1,0 +1,41 @@
+{
+  "order": 50,
+  "status": "published",
+  "featured": false,
+  "group": "game",
+  "company": "GAIT",
+  "year": 2026,
+  "name_ar": "Domono",
+  "name_en": "Domono",
+  "category_ar": "لعبة جماعية",
+  "category_en": "Multiplayer game",
+  "description_ar": "مقهى دومينو مصري على موبايلك: العب أونلاين، أو ادعُ أصدقاءك لطاولة خاصة، أو تدرّب ضد الكمبيوتر بدون إنترنت.",
+  "description_en": "An Egyptian domino café on your phone: play online, invite friends to a private table, or practice against the computer offline.",
+  "features_ar": [
+    "مباريات أونلاين",
+    "طاولات خاصة للأصدقاء",
+    "اللعب ضد الكمبيوتر",
+    "بدون إنترنت"
+  ],
+  "features_en": [
+    "Online matches",
+    "Private tables with friends",
+    "Play against the computer",
+    "Offline mode"
+  ],
+  "role_ar": "اللعبة والـ Back-end",
+  "role_en": "The game and the back end",
+  "stack": "Flutter · Laravel · Realtime",
+  "icon": "/uploads/projects/domono/icon.jpg",
+  "screens": [
+    "/uploads/projects/domono/screen-1.jpg",
+    "/uploads/projects/domono/screen-2.jpg",
+    "/uploads/projects/domono/screen-3.jpg"
+  ],
+  "landscape": true,
+  "logo_only": false,
+  "tint": "#DDEBDD",
+  "accent": "#2F7D3B",
+  "play_url": "https://play.google.com/store/apps/details?id=com.gaitco.domono",
+  "appstore_url": "https://apps.apple.com/eg/app/domono-dominoes-with-friends/id6765519076"
+}

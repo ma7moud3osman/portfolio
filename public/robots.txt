@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /admin/
+
+Sitemap: https://ma7moud3osman.pages.dev/sitemap-index.xml

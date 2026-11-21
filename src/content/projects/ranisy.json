@@ -1,0 +1,41 @@
+{
+  "order": 10,
+  "status": "published",
+  "featured": true,
+  "group": "business",
+  "company": "GAIT",
+  "year": 2026,
+  "name_ar": "Ranisy Logistics",
+  "name_en": "Ranisy Logistics",
+  "category_ar": "لوجستيات",
+  "category_en": "Logistics",
+  "description_ar": "منصة تجمع التخليص الجمركي وإدارة النقل والتوصيل في تطبيق واحد للأفراد والشركات.",
+  "description_en": "One platform for customs clearance, transport management and delivery, for individuals and companies.",
+  "features_ar": [
+    "حساب الرسوم الجمركية",
+    "تتبع الشحنة على الخريطة",
+    "توزيع الطلبات على السائقين",
+    "صلاحيات متعددة"
+  ],
+  "features_en": [
+    "Customs fee calculation",
+    "Live shipment tracking on the map",
+    "Dispatching orders to drivers",
+    "Role-based accounts"
+  ],
+  "role_ar": "التطبيق كاملًا ولوحة التحكم والنشر",
+  "role_en": "The full app, the admin panel and store releases",
+  "stack": "Flutter · Laravel · Google Maps",
+  "icon": "/uploads/projects/ranisy/icon.jpg",
+  "screens": [
+    "/uploads/projects/ranisy/screen-1.jpg",
+    "/uploads/projects/ranisy/screen-2.jpg",
+    "/uploads/projects/ranisy/screen-3.jpg"
+  ],
+  "landscape": false,
+  "logo_only": false,
+  "tint": "#DCE6FF",
+  "accent": "#2853D6",
+  "play_url": "https://play.google.com/store/apps/details?id=com.ghanemtech.ranisy_logistics",
+  "appstore_url": "https://apps.apple.com/eg/app/ranisy/id6752961630"
+}

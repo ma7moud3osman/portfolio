@@ -1,0 +1,130 @@
+backend:
+  name: github
+  repo: ma7moud3osman/portfolio
+  branch: main
+  commit_messages:
+    create: 'إضافة {{collection}}: {{slug}}'
+    update: 'تحديث {{collection}}: {{slug}}'
+    delete: 'حذف {{collection}}: {{slug}}'
+    uploadMedia: 'رفع ملف: {{path}}'
+    deleteMedia: 'حذف ملف: {{path}}'
+
+site_url: https://ma7moud3osman.pages.dev
+locale: ar
+media_folder: public/uploads
+public_folder: /uploads
+
+collections:
+  - name: projects
+    label: المشاريع
+    label_singular: مشروع
+    folder: src/content/projects
+    format: json
+    extension: json
+    create: true
+    delete: true
+    slug: '{{fields.name_en | slugify}}'
+    identifier_field: name_en
+    summary: '{{name_ar}} ({{status}})'
+    sortable_fields: [order, name_en, company]
+    media_folder: /public/uploads/projects
+    public_folder: /uploads/projects
+    fields:
+      - { name: name_ar, label: الاسم بالعربية, widget: string }
+      - { name: name_en, label: الاسم بالإنجليزية, widget: string }
+      - name: status
+        label: الحالة
+        widget: select
+        default: published
+        options:
+          - { label: منشور على الموقع, value: published }
+          - { label: مخفي, value: hidden }
+      - { name: featured, label: من أبرز الأعمال, widget: boolean, default: false }
+      - { name: order, label: الترتيب, widget: number, value_type: int, default: 100 }
+      - name: group
+        label: التصنيف
+        widget: select
+        options:
+          - { label: أعمال, value: business }
+          - { label: حياة يومية, value: life }
+          - { label: ألعاب, value: game }
+      - { name: category_ar, label: المجال بالعربية, widget: string }
+      - { name: category_en, label: المجال بالإنجليزية, widget: string }
+      - { name: company, label: الشركة, widget: string, required: false }
+      - { name: year, label: السنة, widget: number, value_type: int, required: false }
+      - { name: description_ar, label: الوصف بالعربية, widget: text }
+      - { name: description_en, label: الوصف بالإنجليزية, widget: text }
+      - { name: features_ar, label: المزايا بالعربية, widget: list, field: { name: item, label: ميزة, widget: string } }
+      - { name: features_en, label: المزايا بالإنجليزية, widget: list, field: { name: item, label: ميزة, widget: string } }
+      - { name: role_ar, label: دوري بالعربية, widget: string }
+      - { name: role_en, label: دوري بالإنجليزية, widget: string }
+      - { name: stack, label: التقنيات, widget: string }
+      - { name: icon, label: الأيقونة, widget: image }
+      - { name: screens, label: الشاشات, widget: image, multiple: true, required: false }
+      - { name: landscape, label: شاشات أفقية, widget: boolean, default: false }
+      - { name: logo_only, label: شعار فقط بدون شاشات, widget: boolean, default: false }
+      - { name: tint, label: لون الخلفية, widget: color, default: '#E9EAF0' }
+      - { name: accent, label: اللون المميز, widget: color, default: '#101114' }
+      - { name: play_url, label: رابط Google Play, widget: string, required: false }
+      - { name: appstore_url, label: رابط App Store, widget: string, required: false }
+
+  - name: settings
+    label: بيانات الموقع
+    files:
+      - name: site
+        label: البيانات الأساسية والسيرة الذاتية
+        file: src/data/site.json
+        format: json
+        fields:
+          - { name: name, label: الاسم, widget: string }
+          - { name: title_ar, label: المسمى بالعربية, widget: string }
+          - { name: title_en, label: المسمى بالإنجليزية, widget: string }
+          - { name: headline_ar, label: العنوان الرئيسي بالعربية, widget: string }
+          - { name: headline_en, label: العنوان الرئيسي بالإنجليزية, widget: string }
+          - { name: seo_description_ar, label: وصف محركات البحث بالعربية, widget: text }
+          - { name: seo_description_en, label: وصف محركات البحث بالإنجليزية, widget: text }
+          - { name: photo, label: الصورة الشخصية, widget: image, media_folder: /public/uploads/site, public_folder: /uploads/site }
+          - { name: cv, label: ملف السيرة الذاتية PDF, widget: file, required: false, media_folder: /public/uploads/cv, public_folder: /uploads/cv }
+          - { name: email, label: البريد الإلكتروني, widget: string }
+          - { name: linkedin, label: رابط LinkedIn, widget: string, required: false }
+          - { name: github, label: رابط GitHub, widget: string, required: false }
+          - { name: mostaql, label: رابط مستقل, widget: string, required: false }
+          - { name: years_experience, label: سنوات الخبرة, widget: number, value_type: int }
+          - { name: companies_count, label: عدد الشركات, widget: number, value_type: int }
+          - name: hero_apps
+            label: تطبيقات الواجهة الرئيسية
+            widget: relation
+            collection: projects
+            value_field: '{{slug}}'
+            search_fields: [name_en, name_ar]
+            display_fields: [name_ar]
+            multiple: true
+          - { name: skills, label: المهارات, widget: list, field: { name: item, label: مهارة, widget: string } }
+          - name: steps
+            label: خطوات العمل
+            widget: list
+            fields:
+              - { name: title_ar, label: العنوان بالعربية, widget: string }
+              - { name: title_en, label: العنوان بالإنجليزية, widget: string }
+              - { name: body_ar, label: الشرح بالعربية, widget: text }
+              - { name: body_en, label: الشرح بالإنجليزية, widget: text }
+          - name: experience
+            label: المسيرة المهنية
+            widget: list
+            summary: '{{company_en}} ({{period_en}})'
+            fields:
+              - { name: company_ar, label: الشركة بالعربية, widget: string }
+              - { name: company_en, label: الشركة بالإنجليزية, widget: string }
+              - { name: period_ar, label: الفترة بالعربية, widget: string }
+              - { name: period_en, label: الفترة بالإنجليزية, widget: string }
+              - { name: role_ar, label: المسمى بالعربية, widget: string }
+              - { name: role_en, label: المسمى بالإنجليزية, widget: string }
+              - { name: color, label: اللون, widget: color }
+              - name: apps
+                label: التطبيقات
+                widget: relation
+                collection: projects
+                value_field: '{{slug}}'
+                search_fields: [name_en, name_ar]
+                display_fields: [name_ar]
+                multiple: true

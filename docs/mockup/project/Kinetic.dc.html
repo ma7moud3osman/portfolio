@@ -1,0 +1,295 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<title>الاتجاه أ - حركة الحروف</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@300;400;600;800;900&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#F3F5FA}
+a{color:#3446FF;text-decoration:none}a:hover{color:#1F2BC4}
+a:focus-visible,button:focus-visible{outline:3px solid #3446FF;outline-offset:3px;border-radius:8px}
+@keyframes up{from{transform:translateY(110%)}to{transform:none}}
+@keyframes fade{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:none}}
+@keyframes ticker{0%,20%{transform:translateY(0)}25%,45%{transform:translateY(-25%)}50%,70%{transform:translateY(-50%)}75%,95%{transform:translateY(-75%)}100%{transform:translateY(0)}}
+@keyframes spin{to{transform:rotate(360deg)}}
+@keyframes mq{from{transform:translateX(0)}to{transform:translateX(50%)}}
+@keyframes mqr{from{transform:translateX(50%)}to{transform:translateX(0)}}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
+@keyframes bob2{0%,100%{transform:translateY(-8px)}50%{transform:translateY(8px)}}
+@keyframes swap{0%,42%{opacity:1}50%,92%{opacity:0}100%{opacity:1}}
+@keyframes fill{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+@keyframes shimmer{from{background-position:200% 0}to{background-position:-200% 0}}
+@keyframes cue{0%{transform:translateY(0);opacity:1}80%{transform:translateY(14px);opacity:0}100%{opacity:0}}
+@keyframes rv{from{opacity:0;transform:translateY(60px)}to{opacity:1;transform:none}}
+@supports (animation-timeline: view()){.rv{animation:rv linear both;animation-timeline:view();animation-range:entry 0% cover 28%}}
+.step{transition:background .3s ease,color .3s ease,transform .3s ease}.step:hover{background:#0D1321;color:#FFFFFF;transform:translateY(-6px)}
+.stage img{transition:transform .5s cubic-bezier(.2,.8,.2,1)}.card:hover .stage .ph1{transform:translateY(-10px)}.card:hover .stage .ph2{transform:translateY(10px)}
+@media (max-width: 900px){.cols{grid-template-columns:1fr!important}.big{font-size:96px!important}.steps{grid-template-columns:1fr 1fr!important}}
+@media (prefers-reduced-motion: reduce){*{animation:none!important;transition:none!important}}
+</style>
+</helmet>
+<div dir="rtl" style="font-family: 'Alexandria', system-ui, sans-serif; color: #0D1321; background: #F3F5FA">
+
+  <header style="position: sticky; top: 0; z-index: 10; background: rgba(243,245,250,.86); backdrop-filter: blur(12px); border-bottom: 1px solid #E1E5EF">
+    <div style="max-width: 1320px; margin: 0 auto; padding: 18px 40px; display: flex; flex-wrap: wrap; align-items: center; gap: 16px 40px">
+      <a href="#" style="font-weight: 800; font-size: 20px; color: #0D1321">م.عثمان</a>
+      <nav aria-label="القائمة الرئيسية" style="display: flex; gap: 32px; flex-grow: 1; justify-content: center; font-size: 16px">
+        <a href="#work" style="color: #0D1321">الأعمال</a>
+        <a href="#process" style="color: #0D1321">طريقة العمل</a>
+        <a href="#contact" style="color: #0D1321">التواصل</a>
+      </nav>
+      <a href="#" lang="en" style="color: #4A5468; font-size: 15px">EN</a>
+      <a href="#" target="_blank" style="background: #0D1321; color: #FFFFFF; padding: 12px 22px; border-radius: 999px; font-size: 15px">السيرة الذاتية</a>
+    </div>
+  </header>
+
+  <section style="max-width: 1320px; margin: 0 auto; padding: 56px 40px 72px">
+    <div style="display: flex; flex-wrap: wrap; align-items: flex-end; gap: 24px 48px">
+      <h1 class="big" style="margin: 0; font-size: 200px; line-height: .95; font-weight: 900; letter-spacing: -4px; flex: 1 1 700px">
+        <span style="display: block; overflow: hidden; padding-bottom: 14px"><span style="display: inline-block; animation: up 1s cubic-bezier(.2,.8,.2,1) both">محمود</span></span>
+        <span style="display: block; overflow: hidden; padding-bottom: 14px"><span style="display: inline-block; animation: up 1s .15s cubic-bezier(.2,.8,.2,1) both; color: #3446FF">عثمان</span></span>
+      </h1>
+      <div style="flex: 0 0 260px; position: relative; width: 260px; height: 260px; animation: fade 1s .5s ease both">
+        <svg viewBox="0 0 200 200" role="img" aria-label="متاح لمشاريع جديدة" style="position: absolute; inset: 0; width: 100%; height: 100%; animation: spin 18s linear infinite">
+          <defs><path id="circ" d="M100,100 m-80,0 a80,80 0 1,1 160,0 a80,80 0 1,1 -160,0"/></defs>
+          <text font-size="15" font-weight="600" fill="#0D1321" letter-spacing="2"><textPath href="#circ">متاح لمشاريع جديدة • متاح لمشاريع جديدة • </textPath></text>
+        </svg>
+        <img src="/_blob/529b959f7c740238c243b90e9ae3b5ac" alt="صورة محمود عثمان" style="position: absolute; inset: 52px; width: 156px; height: 156px; border-radius: 50%; object-fit: cover; background: #DCE1EC">
+      </div>
+    </div>
+
+    <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 32px; margin-top: 40px; border-top: 2px solid #0D1321; padding-top: 28px; animation: fade 1s .35s ease both">
+      <p style="margin: 0; font-size: 34px; font-weight: 600; line-height: 1.4; display: flex; flex-wrap: wrap; align-items: center; gap: 12px">
+        أطوّر تطبيقات
+        <span style="display: inline-block; height: 48px; overflow: hidden; background: #FFD84D; padding: 0 16px; border-radius: 12px">
+          <span lang="en" style="display: flex; flex-direction: column; animation: ticker 8s cubic-bezier(.7,0,.3,1) infinite">
+            <span style="height: 48px; line-height: 48px">Flutter</span>
+            <span style="height: 48px; line-height: 48px">Android</span>
+            <span style="height: 48px; line-height: 48px">iOS</span>
+            <span style="height: 48px; line-height: 48px">Laravel</span>
+          </span>
+        </span>
+        من الفكرة حتى المتجر.
+      </p>
+      <div style="display: flex; gap: 40px">
+        <sc-for list="{{ stats }}" as="s" hint-placeholder-count="3">
+          <div style="display: flex; flex-direction: column">
+            <span style="font-size: 56px; font-weight: 900; line-height: 1; font-variant-numeric: tabular-nums">{{ s.value }}</span>
+            <span style="font-size: 14px; color: #4A5468">{{ s.label }}</span>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+    <a href="#work" style="display: inline-flex; align-items: center; gap: 12px; margin-top: 40px; color: #0D1321; font-size: 15px">
+      <span aria-hidden="true" style="width: 26px; height: 42px; border: 2px solid #0D1321; border-radius: 14px; display: inline-flex; justify-content: center; padding-top: 7px; box-sizing: border-box"><span style="width: 4px; height: 8px; border-radius: 2px; background: #0D1321; animation: cue 1.8s ease infinite"></span></span>
+      مرّر لترى الأعمال
+    </a>
+  </section>
+
+  <div aria-hidden="true" style="position: relative; height: 230px; overflow: hidden">
+    <div style="position: absolute; top: 30px; right: -5%; width: 110%; background: #3446FF; transform: rotate(-3deg); padding: 18px 0; overflow: hidden">
+      <div style="display: flex; gap: 56px; width: max-content; animation: mq 26s linear infinite">
+        <sc-for list="{{ names }}" as="n" hint-placeholder-count="18">
+          <span style="display: inline-flex; align-items: center; gap: 18px; font-size: 54px; font-weight: 900; color: #FFFFFF; white-space: nowrap"><img src="{{ n.icon }}" alt="" style="width: 56px; height: 56px; border-radius: 15px">{{ n.name }}</span>
+        </sc-for>
+      </div>
+    </div>
+    <div style="position: absolute; top: 132px; right: -5%; width: 110%; background: #0D1321; transform: rotate(2deg); padding: 16px 0; overflow: hidden">
+      <div style="display: flex; gap: 48px; width: max-content; animation: mqr 32s linear infinite">
+        <sc-for list="{{ skills }}" as="k" hint-placeholder-count="20">
+          <span lang="en" style="font-size: 30px; font-weight: 600; color: transparent; -webkit-text-stroke: 1.2px #FFFFFF; white-space: nowrap">{{ k }}</span>
+        </sc-for>
+      </div>
+    </div>
+  </div>
+
+  <section id="work" style="max-width: 1320px; margin: 0 auto; padding: 100px 40px 40px">
+    <div class="rv" style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 16px; margin-bottom: 48px">
+      <h2 style="margin: 0; font-size: 96px; font-weight: 900; letter-spacing: -2px; line-height: 1">أعمال مختارة</h2>
+      <p style="margin: 0; font-size: 18px; color: #4A5468; max-width: 24em; line-height: 1.7">تطبيقات منشورة على Google Play وApp Store. مرّر لأسفل لتمر عليها واحدًا تلو الآخر.</p>
+    </div>
+    <div style="display: flex; flex-direction: column; gap: 40px">
+      <sc-for list="{{ cards }}" as="c" hint-placeholder-count="4">
+        <article class="card" style="position: sticky; top: {{ c.top }}; background: {{ c.bg }}; color: {{ c.fg }}; border-radius: 40px; min-height: 600px; box-sizing: border-box; overflow: hidden; box-shadow: 0 -24px 60px rgba(13,19,33,.14)">
+          <div class="cols" style="display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr); min-height: 600px">
+            <div style="padding: 56px; display: flex; flex-direction: column; gap: 22px; position: relative; z-index: 2">
+              <div style="display: flex; align-items: center; gap: 14px">
+                <img src="{{ c.icon }}" alt="" style="width: 56px; height: 56px; border-radius: 14px">
+                <span style="font-size: 16px; opacity: .85">{{ c.meta }}</span>
+              </div>
+              <h3 style="margin: 0; font-size: 80px; font-weight: 900; line-height: 1; letter-spacing: -2px">{{ c.name }}</h3>
+              <p style="margin: 0; font-size: 20px; line-height: 1.75; max-width: 28em; opacity: .92">{{ c.desc }}</p>
+              <dl style="margin: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; border-top: 1.5px solid {{ c.line }}; padding-top: 20px">
+                <div><dt style="font-size: 13px; opacity: .7">دوري</dt><dd style="margin: 4px 0 0; font-size: 16px; font-weight: 600; line-height: 1.5">{{ c.role }}</dd></div>
+                <div><dt style="font-size: 13px; opacity: .7">المنصات</dt><dd style="margin: 4px 0 0; font-size: 16px; font-weight: 600">Android · iOS</dd></div>
+                <div><dt style="font-size: 13px; opacity: .7">التقنيات</dt><dd lang="en" style="margin: 4px 0 0; font-size: 16px; font-weight: 600; line-height: 1.5">{{ c.stack }}</dd></div>
+              </dl>
+              <div style="display: flex; gap: 12px; flex-wrap: wrap; margin-top: auto">
+                <a href="#" target="_blank" style="background: {{ c.fg }}; color: {{ c.bg }}; padding: 14px 24px; border-radius: 999px; font-size: 16px; font-weight: 600">Google Play</a>
+                <a href="#" target="_blank" style="background: {{ c.fg }}; color: {{ c.bg }}; padding: 14px 24px; border-radius: 999px; font-size: 16px; font-weight: 600">App Store</a>
+                <a href="#" style="color: {{ c.fg }}; padding: 14px 8px; font-size: 16px; text-decoration: underline">قصة المشروع كاملة</a>
+              </div>
+            </div>
+            <div class="stage" style="position: relative; overflow: hidden; background: {{ c.stage }}; display: flex; align-items: center; justify-content: center; gap: 24px; padding: 48px 24px">
+              <div class="ph1" style="width: 200px; height: 420px; border-radius: 34px; border: 7px solid #0D1321; overflow: hidden; position: relative; background: #0D1321; box-shadow: 0 26px 50px rgba(0,0,0,.3); animation: bob 7s ease-in-out infinite; flex: 0 0 auto">
+                <img src="{{ c.shot1 }}" alt="شاشة من {{ c.name }}" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover">
+                <img src="{{ c.shot3 }}" alt="" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; animation: swap 9s infinite">
+              </div>
+              <div class="ph2" style="width: 200px; height: 420px; border-radius: 34px; border: 7px solid #0D1321; overflow: hidden; background: #0D1321; box-shadow: 0 26px 50px rgba(0,0,0,.3); animation: bob2 8s ease-in-out infinite; margin-top: 60px; flex: 0 0 auto">
+                <img src="{{ c.shot2 }}" alt="" style="width: 100%; height: 100%; object-fit: cover">
+              </div>
+            </div>
+          </div>
+        </article>
+      </sc-for>
+    </div>
+  </section>
+
+  <section style="max-width: 1320px; margin: 0 auto; padding: 100px 40px 80px">
+    <div class="rv" style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 16px; margin-bottom: 32px">
+      <h2 style="margin: 0; font-size: 56px; font-weight: 900">تطبيقات أخرى منشورة</h2>
+      <p style="margin: 0; font-size: 17px; color: #4A5468">ألعاب وتطبيقات يومية وأنظمة للشركات</p>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(380px, 1fr)); gap: 16px">
+      <sc-for list="{{ more }}" as="w" hint-placeholder-count="8">
+        <a href="#" class="rv" style="background: #FFFFFF; border-radius: 28px; padding: 20px; display: flex; gap: 18px; align-items: center; color: #0D1321">
+          <div style="flex: 0 0 {{ w.thW }}; height: {{ w.thH }}; border-radius: 16px; overflow: hidden; background: #0D1321; border: 4px solid #0D1321">
+            <img src="{{ w.shot }}" alt="" style="width: 100%; height: 100%; object-fit: cover; object-position: top; display: block">
+          </div>
+          <div style="flex: 1 1 0; min-width: 0; display: flex; flex-direction: column; gap: 8px">
+            <span style="display: inline-flex; align-items: center; gap: 10px; font-size: 22px; font-weight: 800"><img src="{{ w.icon }}" alt="" style="width: 40px; height: 40px; border-radius: 11px">{{ w.name }}</span>
+            <span style="font-size: 15px; color: #4A5468; line-height: 1.6">{{ w.line }}</span>
+            <span style="font-size: 13px; color: #4A5468">{{ w.meta }}</span>
+          </div>
+        </a>
+      </sc-for>
+    </div>
+    <div class="rv" style="display: flex; flex-wrap: wrap; gap: 16px; margin-top: 16px">
+      <div style="flex: 1 1 380px; display: flex; align-items: center; gap: 14px; background: #FFFFFF; border-radius: 24px; padding: 18px 22px">
+        <img src="/_blob/0484aca6bf7a2882cbd71bf98069f02c" alt="" style="width: 48px; height: 48px; border-radius: 13px; object-fit: contain; background: #F3F5FA">
+        <span style="display: flex; flex-direction: column; flex-grow: 1"><span style="font-size: 20px; font-weight: 800">Jawab</span><span style="font-size: 14px; color: #4A5468">تطبيق تعليمي لشركة Nadeer: أسئلة واختبارات للطلاب والمدرسين مع التصحيح</span></span>
+      </div>
+      <div style="flex: 1 1 380px; display: flex; align-items: center; gap: 14px; background: #FFFFFF; border-radius: 24px; padding: 18px 22px">
+        <span style="width: 48px; height: 48px; border-radius: 13px; background: #B7791F; color: #FFFFFF; display: inline-flex; align-items: center; justify-content: center; font-size: 20px; font-weight: 800">G</span>
+        <span style="display: flex; flex-direction: column; flex-grow: 1"><span style="font-size: 20px; font-weight: 800">Golden Modern School</span><span style="font-size: 14px; color: #4A5468">تطبيق لأولياء الأمور ولوحة تحكم</span></span>
+        <span style="font-size: 13px; background: #FFF3C4; color: #6B4E00; padding: 4px 12px; border-radius: 999px">قيد التطوير</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="process" style="background: #FFFFFF; padding: 100px 0">
+    <div style="max-width: 1320px; margin: 0 auto; padding: 0 40px; display: flex; flex-direction: column; gap: 40px">
+      <h2 class="rv" style="margin: 0; font-size: 56px; font-weight: 900">كيف أعمل على تطبيقك</h2>
+      <div aria-hidden="true" class="rv" style="height: 3px; background: #3446FF; transform-origin: right"></div>
+      <ol class="steps" style="list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px">
+        <sc-for list="{{ steps }}" as="st" hint-placeholder-count="4">
+          <li class="step rv" style="border: 2px solid #0D1321; border-radius: 28px; padding: 28px; display: flex; flex-direction: column; gap: 14px; min-height: 240px; box-sizing: border-box">
+            <span style="font-size: 64px; font-weight: 900; line-height: 1">{{ st.n }}</span>
+            <span style="font-size: 24px; font-weight: 800">{{ st.title }}</span>
+            <span style="font-size: 16px; line-height: 1.7; opacity: .8">{{ st.body }}</span>
+          </li>
+        </sc-for>
+      </ol>
+    </div>
+  </section>
+
+  <footer id="contact" style="background: #0D1321; color: #FFFFFF; padding: 100px 0 60px; overflow: hidden">
+    <a href="mailto:m.3osman99@gmail.com" style="display: block; overflow: hidden; color: #FFFFFF">
+      <span style="display: flex; gap: 64px; width: max-content; animation: mq 22s linear infinite; font-size: 140px; font-weight: 900; letter-spacing: -3px; white-space: nowrap">
+        <span>لنبنِ تطبيقك القادم</span><span style="color: #FFD84D">✦</span><span>لنبنِ تطبيقك القادم</span><span style="color: #FFD84D">✦</span><span>لنبنِ تطبيقك القادم</span><span style="color: #FFD84D">✦</span><span>لنبنِ تطبيقك القادم</span><span style="color: #FFD84D">✦</span>
+      </span>
+    </a>
+    <div style="max-width: 1320px; margin: 48px auto 0; padding: 0 40px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 24px; align-items: center">
+      <a href="mailto:m.3osman99@gmail.com" dir="ltr" style="font-size: 28px; color: #FFD84D">m.3osman99@gmail.com</a>
+      <nav aria-label="روابط التواصل" style="display: flex; gap: 12px">
+        <a href="#" target="_blank" style="color: #FFFFFF; border: 1.5px solid #FFFFFF; padding: 12px 22px; border-radius: 999px">LinkedIn</a>
+        <a href="#" target="_blank" style="color: #FFFFFF; border: 1.5px solid #FFFFFF; padding: 12px 22px; border-radius: 999px">GitHub</a>
+        <a href="#" target="_blank" style="color: #FFFFFF; border: 1.5px solid #FFFFFF; padding: 12px 22px; border-radius: 999px">مستقل</a>
+      </nav>
+    </div>
+  </footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":5000}}'>
+class Component extends DCLogic {
+  componentDidMount() {
+    const start = Date.now();
+    const tick = () => { const t = Math.min(1, (Date.now() - start) / 1600); this.setState({ t: 1 - Math.pow(1 - t, 3) }); if (t < 1) this.raf = requestAnimationFrame(tick); };
+    this.raf = requestAnimationFrame(tick);
+  }
+  componentWillUnmount() { cancelAnimationFrame(this.raf); }
+  renderVals() {
+    const t = (this.state && this.state.t) || 0;
+    const pad = (n) => String(Math.round(n * t)).padStart(2, '0');
+    const I = {
+      ranisy: '/_blob/acb13b1785673e44adc10a1d005868f4', aonevet: '/_blob/19f4869a25e350b7fc7ac7cb9aa16b66',
+      shaair: '/_blob/442309028bba453e85c7a3c72e4ed39a', m3: '/_blob/1c77d4981b09f97b7671faefc3597164',
+      rawabit: '/_blob/85e80de27c30919b7c201b153b293a00', a168: '/_blob/ed24bb7cc975342301acd2c1dcf02b64',
+      arkan: '/_blob/372c7eb48f18ba7542253c231e4c5d32', micropet: '/_blob/5a9358c849c3c460678e28bacadfe817',
+      cavo: '/_blob/17ecfb7b3e9e6c2f775f0c64ed087395'
+    };
+    const names = [
+      { name: 'Ranisy', icon: I.ranisy }, { name: 'شعائر', icon: I.shaair }, { name: 'Rawabit', icon: I.rawabit },
+      { name: 'A One Vet', icon: I.aonevet }, { name: '3M & Solitaire', icon: I.m3 }, { name: '168', icon: I.a168 },
+      { name: 'الأركان', icon: I.arkan }, { name: 'MicroPet', icon: '/_blob/a6bb33c1b41c22a0f5356058dabc2b27' },
+      { name: 'Haqlex', icon: '/_blob/e8cf3477925aaa899ecb7d5246d3858b' }, { name: 'LabX', icon: '/_blob/c4d2abfc1b49724b150cbb194c68cdeb' },
+      { name: 'Domono', icon: '/_blob/2e577ceb25e797ca869c0a897dd50f26' }, { name: 'كرك وأسئلة', icon: '/_blob/2b9aa70812888f215c1caa9d96b68842' },
+      { name: 'Kease', icon: '/_blob/5cd3c0afd3cbcbc049a5e11431757b92' }
+    ];
+    const skills = ['Flutter', 'Dart', 'Laravel', 'Filament', 'Firebase', 'REST APIs', 'BLoC', 'Provider', 'Clean Architecture', 'Google Maps'];
+    return {
+      stats: [ { value: pad(15), label: 'تطبيقًا منشورًا' }, { value: '+' + Math.round(5 * t), label: 'سنوات خبرة' }, { value: pad(3), label: 'شركات' } ],
+      names: names.concat(names),
+      skills: skills.concat(skills),
+      cards: [
+        { name: 'Ranisy', meta: 'GAIT · لوجستيات · 2026', bg: '#0E3B8C', fg: '#FFFFFF', line: 'rgba(255,255,255,.35)', stage: '#0B2F70', top: '96px',
+          icon: I.ranisy, shot1: '/_blob/ee0ea38d34ea549d55710213ca963cc3', shot2: '/_blob/b0db2f9ccf65a5c096e642b8473f4e39', shot3: '/_blob/eb99df01cbd3b78c24c0a55f2c212266',
+          desc: 'تخليص جمركي وإدارة نقل وتتبع مباشر للشحنات على الخريطة، في تطبيق واحد للأفراد والشركات.',
+          role: 'التطبيق كاملًا ولوحة التحكم', stack: 'Flutter · Laravel · Maps' },
+        { name: 'شعائر', meta: 'GAIT · تطبيق إسلامي · 2026', bg: '#F4EDE3', fg: '#23301F', line: 'rgba(35,48,31,.3)', stage: '#E9DFD0', top: '120px',
+          icon: I.shaair, shot1: '/_blob/c22acdfb9a7529796137355fd738ae14', shot2: '/_blob/98256355a655d80df9aba773d6cf2f6f', shot3: '/_blob/98256355a655d80df9aba773d6cf2f6f',
+          desc: 'مواقيت الصلاة والأذكار والقرآن الكريم، مع حفظ بالتكرار وودجت يتحدث والتطبيق مغلق.',
+          role: 'معظم التطبيق والنشر', stack: 'Flutter · Widgets · Offline' },
+        { name: 'Rawabit', meta: 'Nadeer · نظام ERP · 2025', bg: '#14161F', fg: '#FFFFFF', line: 'rgba(255,255,255,.3)', stage: '#1C1F2B', top: '144px',
+          icon: I.rawabit, shot1: '/_blob/02dddcac1951d7fe5e43ca7e1b7c84df', shot2: '/_blob/999bf5319f1d3cbc990e5bae8d2c71de', shot3: '/_blob/999bf5319f1d3cbc990e5bae8d2c71de',
+          desc: 'محاسبة وموارد بشرية وإدارة عملاء في نظام واحد، مع تقارير لحظية لأداء الشركة.',
+          role: 'الشاشات والربط بالـ APIs', stack: 'BLoC · Clean Architecture' },
+        { name: 'Haqlex', meta: 'GAIT · قانون · 2026', bg: '#EFE6D2', fg: '#3A2A0B', line: 'rgba(58,42,11,.3)', stage: '#E4D8BE', top: '168px',
+          icon: '/_blob/e8cf3477925aaa899ecb7d5246d3858b', shot1: '/_blob/acb144756a950348d60a480c0e9362e7', shot2: '/_blob/7291bf064d90fd9b07fe11f6f6f1e259', shot3: '/_blob/7291bf064d90fd9b07fe11f6f6f1e259',
+          desc: 'رفيق مكتب المحاماة: القضايا والجلسات في جيبك، يعمل بدون إنترنت ويتزامن مع كمبيوتر المكتب.',
+          role: 'تطبيقات الموبايل وسطح المكتب', stack: 'Flutter · Desktop' },
+        { name: 'LabX Tech', meta: 'GAIT · معدات معامل · 2026', bg: '#0F4C55', fg: '#FFFFFF', line: 'rgba(255,255,255,.3)', stage: '#0B3D45', top: '192px',
+          icon: '/_blob/c4d2abfc1b49724b150cbb194c68cdeb', shot1: '/_blob/1992f4ecb204886af5191e2f49ca214c', shot2: '/_blob/d065036728977353997afac9a82f1f76', shot3: '/_blob/d065036728977353997afac9a82f1f76',
+          desc: 'من اختيار معدات المعامل ومقارنتها حتى الصيانة وخدمة ما بعد البيع، في تطبيق واحد.',
+          role: 'التطبيق ولوحة التحكم', stack: 'Flutter · Filament' }
+      ],
+      more: [
+        { name: 'Domono', icon: '/_blob/2e577ceb25e797ca869c0a897dd50f26', shot: '/_blob/aa898cb4263c6c6a61888a7141dc5d32', land: true, meta: 'GAIT · لعبة · Android وiOS', line: 'مقهى دومينو مصري: أونلاين ومع الأصدقاء وبدون إنترنت.' },
+        { name: 'كرك وأسئلة', icon: '/_blob/2b9aa70812888f215c1caa9d96b68842', shot: '/_blob/251ebbf7b9bd63a71495f4893d2ef9bf', land: true, meta: 'GAIT · لعبة · Android وiOS', line: 'مسابقات عربية لفريقين، وكل جولة بطريقة مختلفة.' },
+        { name: 'MicroPet', icon: '/_blob/a6bb33c1b41c22a0f5356058dabc2b27', shot: '/_blob/1804cb5667372bd72b9073266d01533c', meta: 'MicroVet · Android وiOS', line: 'معرّف ورمز QR لكل حيوان أليف ليعود لصاحبه.' },
+        { name: 'Kease', icon: '/_blob/5cd3c0afd3cbcbc049a5e11431757b92', shot: '/_blob/9573638e28c302821d1afa488e4431bc', meta: 'عقارات · Android وiOS', line: 'تجربة متكاملة لعملاء الشقق الفاخرة في الرياض.' },
+        { name: '3M & Solitaire', icon: I.m3, shot: '/_blob/d9105c771c2b1dbf99016955c198e565', meta: 'GAIT · Android وiOS', line: 'تتبع الشحنات والتخليص الجمركي لحظيًا.' },
+        { name: '168', icon: I.a168, shot: '/_blob/8cb3e1eb15a9db87e04b4c81d0fea3f2', meta: 'Nadeer · Android وiOS', line: 'إدارة المهام ومتابعة الإنتاجية.' },
+        { name: 'أكاديمية الأركان', icon: I.arkan, shot: '/_blob/8585af2ba1e8d77f429faff3cabe8f41', meta: 'ScopeLinks · Android وiOS', line: 'محاضرات واختبارات لطلاب الأكاديمية.' },
+        { name: 'A One Vet', icon: I.aonevet, shot: '/_blob/9b6966d6c60644208f3addff953ab7e2', meta: 'GAIT · Android وiOS', line: 'متجر للأدوية والمستلزمات البيطرية.' },
+        { name: 'هايبر أسواق الشرقية', icon: '/_blob/e2dd38ecf5ac000c1cbbee9305e96a9b', shot: '/_blob/3c0994ee2edfbd635cbd1fc02a554391', meta: 'ScopeLinks · Android', line: 'متجر جملة للتجار من هايبر أسواق الشرقية.' },
+        { name: 'Cavo Egypt', icon: I.cavo, shot: '/_blob/d4f4225eff7de7aa832c2132f43778e1', meta: 'ScopeLinks · Android', line: 'متجر لمنتجات Cavo لتصنيع الكابلات.' }
+      ].map(m => ({ ...m, thW: m.land ? '170px' : '74px', thH: m.land ? '80px' : '156px' })),
+      steps: [
+        { n: '01', title: 'الفكرة والتخطيط', body: 'نحدد المستخدمين والمزايا الأساسية وخطة الإصدار الأول.' },
+        { n: '02', title: 'التصميم', body: 'شاشات واضحة بالعربية والإنجليزية قبل كتابة أي كود.' },
+        { n: '03', title: 'التطوير والربط', body: 'تطبيق Flutter مع Back-end ولوحة تحكم بـ Laravel.' },
+        { n: '04', title: 'النشر والمتابعة', body: 'النشر على المتجرين، ثم التحديثات وإصلاح المشكلات.' }
+      ]
+    };
+  }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,6 @@
+---
+interface Props { play: string; appstore: string; name: string; keepHidden?: boolean }
+const { play, appstore, name, keepHidden = false } = Astro.props;
+---
+{(play || keepHidden) && <a class="btn" data-store="play" href={play || '#'} hidden={!play} target="_blank" rel="noopener" aria-label={`Google Play: ${name}`}>Google Play</a>}
+{(appstore || keepHidden) && <a class="btn" data-store="appstore" href={appstore || '#'} hidden={!appstore} target="_blank" rel="noopener" aria-label={`App Store: ${name}`}>App Store</a>}
