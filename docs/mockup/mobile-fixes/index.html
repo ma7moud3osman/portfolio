@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mobile fixes</title>
+<style>
+:root{--bg:#F6F6F8;--ink:#101114;--muted:#55596A;--card:#fff;--line:#E4E5EA}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#15161A;--ink:#F1F2F5;--muted:#A3A7B5;--card:#1F2026;--line:#2D2F37}}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"IBM Plex Sans Arabic",system-ui,sans-serif}
+main{max-width:1000px;margin:0 auto;padding:32px 16px 64px}
+h1{margin:0 0 6px;font-size:28px}
+.lead{margin:0 0 32px;color:var(--muted);line-height:1.7}
+section{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:20px;margin-bottom:20px}
+h2{margin:0 0 6px;font-size:20px}
+section p{margin:0 0 16px;color:var(--muted);line-height:1.7;font-size:15px}
+.pair{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+figure{margin:0}
+figcaption{font-size:13px;font-weight:600;margin-bottom:8px}
+.after figcaption{color:#0F7A55}
+.shots{display:flex;flex-direction:column;gap:8px}
+img{width:100%;max-width:300px;display:block;border-radius:14px;border:1px solid var(--line)}
+@media (max-width:640px){.pair{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<main>
+<h1>تعديلات عرض الموبايل</h1>
+<p class="lead">لقطات من الموقع المنشور بعرض 375px. في كل قسم: الشكل الحالي أولًا، ثم الشكل المقترح بعد تطبيق التعديلات مؤقتًا على الصفحة نفسها. طول الصفحة ينخفض من 10,264px إلى 8,645px، بدون أي تمرير أفقي جديد.</p>
+
+<section>
+<h2>١. الهيدر والعنوان الرئيسي</h2>
+<p>الهيدر أصغر ولا يبقى ثابتًا أعلى الشاشة على الموبايل، فلا يغطي المحتوى أثناء التمرير. والعنوان موزّع على الأسطر بالتساوي بدل نزول كلمة «يوم.» وحدها.</p>
+<div class="pair">
+<figure><figcaption>الحالي</figcaption><img src="before-hero.jpg" alt="الهيدر والعنوان الحاليان"></figure>
+<figure class="after"><figcaption>المقترح</figcaption><img src="after-hero.jpg" alt="الهيدر والعنوان المقترحان"></figure>
+</div>
+</section>
+
+<section>
+<h2>٢. المعرض</h2>
+<p>قائمة التطبيقات تصبح شبكة أيقونات من 4 أعمدة تظهر كلها مرة واحدة بدل التمرير الأفقي. والجهاز أصغر، فتقترب بطاقة التفاصيل ويرى الزائر التغيير بعد اختيار تطبيق. وأزرار التصنيف تنزل لسطر ثانٍ عند الحاجة بدل أن تنكسر.</p>
+<div class="pair">
+<figure><figcaption>الحالي</figcaption><div class="shots"><img src="before-room.jpg" alt="المعرض الحالي"><img src="before-room-2.jpg" alt="تفاصيل التطبيق الحالية"></div></figure>
+<figure class="after"><figcaption>المقترح</figcaption><div class="shots"><img src="after-room.jpg" alt="شبكة التطبيقات المقترحة"><img src="after-room-2.jpg" alt="الجهاز والتفاصيل المقترحة"></div></figure>
+</div>
+</section>
+
+<section>
+<h2>٣. الإحصائيات وخطوات العمل والمسيرة</h2>
+<p>قسم الإحصائيات المكرر يُخفى على الموبايل لأن الأرقام نفسها موجودة في الواجهة الرئيسية. وخطوات العمل والمسيرة تصبح بطاقات أصغر في عمودين، فتظهر الأربع معًا بدل 4 بطاقات طويلة فوق بعضها.</p>
+<div class="pair">
+<figure><figcaption>الحالي</figcaption><div class="shots"><img src="before-stats.jpg" alt="الإحصائيات الحالية"><img src="before-process.jpg" alt="خطوات العمل الحالية"><img src="before-journey.jpg" alt="المسيرة الحالية"></div></figure>
+<figure class="after"><figcaption>المقترح</figcaption><div class="shots"><img src="after-process.jpg" alt="خطوات العمل المقترحة"><img src="after-journey.jpg" alt="المسيرة المقترحة"></div></figure>
+</div>
+</section>
+</main>
+</body>
+</html>

@@ -63,7 +63,7 @@ a:focus-visible, button:focus-visible { outline: 3px solid var(--ink); outline-o
 .hero-text { flex: 1 1 540px; min-width: 0; display: flex; flex-direction: column; gap: 24px; }
 .badge { align-self: flex-start; display: inline-flex; align-items: center; gap: 10px; background: var(--white); padding-block: 8px; padding-inline: 8px 16px; border-radius: 999px; font-size: 14px; font-weight: 500; animation: rise .8s ease both; }
 .badge img { width: 28px; height: 28px; border-radius: 50%; object-fit: cover; }
-.hero h1 { margin: 0; font-size: 76px; line-height: 1.15; animation: rise .9s .1s ease both; }
+.hero h1 { margin: 0; text-wrap: balance; font-size: 76px; line-height: 1.15; animation: rise .9s .1s ease both; }
 .hero-sub { margin: 0; font-size: 26px; font-weight: 500; line-height: 1.5; display: flex; flex-wrap: wrap; align-items: center; gap: 10px; animation: rise .9s .2s ease both; }
 .tick { display: inline-block; height: 42px; overflow: hidden; background: var(--ink); color: var(--white); padding: 0 14px; border-radius: 10px; }
 .tick > span { display: flex; flex-direction: column; animation: ticker 8s cubic-bezier(.7, 0, .3, 1) infinite; }
@@ -224,7 +224,10 @@ a:focus-visible, button:focus-visible { outline: 3px solid var(--ink); outline-o
 }
 @media (max-width: 640px) {
   :root { --gutter: 16px; }
-  .nav { order: 3; width: 100%; gap: 20px; font-size: 15px; overflow-x: auto; }
+  .site-header { position: relative; }
+  .site-header .wrap { padding-block: 12px; gap: 10px 16px; }
+  .brand { font-size: 22px; flex: 1; }
+  .nav { order: 3; width: 100%; gap: 18px; font-size: 14px; }
   .hero .wrap { padding-block: 40px 48px; gap: 36px; }
   .hero h1 { font-size: 40px; }
   .hero-sub { font-size: 20px; }
@@ -243,13 +246,31 @@ a:focus-visible, button:focus-visible { outline: 3px solid var(--ink); outline-o
   .phone-card { width: 150px; height: 320px; border-radius: 28px; }
   .phone-card > div { border-radius: 22px; }
   .room { padding-block: 56px; }
-  .stage-device { min-height: 480px; }
-  .stage-device::before { width: 280px; height: 280px; }
-  .phone-room { width: 222px; height: 480px; border-radius: 38px; }
-  .phone-room > div { border-radius: 30px; }
+  .chips { flex-wrap: wrap; }
+  .chip { white-space: nowrap; }
+  .app-list { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 6px; overflow: visible; }
+  .app-btn { min-width: 0; flex-direction: column; gap: 6px; padding: 8px 4px; text-align: center; }
+  .app-btn:hover { transform: none; }
+  .app-btn > span { align-items: center; width: 100%; }
+  .app-btn b { font-size: 12px; line-height: 1.3; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 100%; unicode-bidi: plaintext; }
+  .app-btn small { display: none; }
+  .app-btn img { width: 48px; height: 48px; }
+  .stage-device { min-height: 400px; }
+  .stage-device::before { width: 230px; height: 230px; }
+  .phone-room { width: 180px; height: 390px; border-radius: 32px; padding: 7px; }
+  .phone-room > div { border-radius: 26px; }
+  .thumb { width: 40px; height: 84px; }
   .detail { padding: 22px; }
-  .tiles { grid-template-columns: 1fr; }
-  .tile b { font-size: 44px; }
+  .stats { display: none; }
+  .process .tiles, .journey .tiles { grid-template-columns: 1fr 1fr; gap: 10px; }
+  .tile { padding: 16px; }
+  .step { min-height: 0; gap: 6px; }
+  .step b { font-size: 30px; }
+  .step strong { font-size: 16px; }
+  .step p, .job p { font-size: 13px; line-height: 1.6; }
+  .job { gap: 4px; }
+  .job strong { font-size: 22px; }
+  .job-apps img { width: 26px; height: 26px; border-radius: 7px; }
   .footer-marquee > span { font-size: 64px; }
 }
 @media (prefers-reduced-motion: reduce) {
