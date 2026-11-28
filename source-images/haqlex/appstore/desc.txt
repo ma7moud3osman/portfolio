@@ -1,0 +1,1 @@
+DESC HaqLex is your legal office companion. Keep a local copy of office records to browse and search on the go, then sync directly with your office computer on its local network.  • Today dashboard, hearing agenda, cases and clients. • Law library: search, read and copy articles after downloading the lib
